@@ -56,17 +56,17 @@ export default function SupportPage() {
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">
-            <div className="p-8 rounded-3xl bg-primary text-white text-center">
+            <div className="p-8 rounded-3xl bg-primary text-gray-900 text-center">
               <MessageSquare className="w-12 h-12 mx-auto mb-6" />
               <h3 className="text-2xl font-bold mb-4">1:1 문의하기</h3>
-              <p className="text-white/80 mb-8">궁금하신 점을 남겨주시면 <br />24시간 이내에 답변 드립니다.</p>
-              <button className="bg-white text-primary px-8 py-3 rounded-xl font-bold w-full">문의 작성</button>
+              <p className="text-gray-900/80 mb-8">궁금하신 점을 남겨주시면 <br />24시간 이내에 답변 드립니다.</p>
+              <button className="bg-secondary text-white px-8 py-3 rounded-xl font-bold w-full">문의 작성</button>
             </div>
             <div className="p-8 rounded-3xl bg-gray-50 border border-gray-100 text-center">
               <Phone className="w-12 h-12 mx-auto mb-6 text-primary" />
               <h3 className="text-2xl font-bold mb-4">전화 상담</h3>
               <p className="text-gray-600 mb-8">전문 상담원과 직접 통화하여 <br />빠르게 해결하세요.</p>
-              <button className="bg-industrial-blue text-white px-8 py-3 rounded-xl font-bold w-full">1588-XXXX</button>
+              <button className="bg-secondary text-white px-8 py-3 rounded-xl font-bold w-full">010-6355-8055</button>
             </div>
           </div>
         </div>

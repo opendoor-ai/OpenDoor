@@ -41,7 +41,7 @@ export default function FloatingActions() {
     <div className="fixed bottom-5 right-5 lg:bottom-8 lg:right-8 z-[100] flex flex-col gap-2 lg:gap-3">
       <a
         href="tel:010-6355-8055"
-        className="w-11 h-11 lg:w-12 lg:h-12 bg-primary rounded-full shadow-lg flex items-center justify-center text-white hover:bg-primary/90 transition-all animate-bounce-subtle lg:hidden"
+        className="w-11 h-11 lg:w-12 lg:h-12 bg-primary rounded-full shadow-lg flex items-center justify-center text-gray-900 hover:brightness-105 transition-all animate-bounce-subtle lg:hidden"
         title="전화 상담"
       >
         <Phone className="w-5 h-5 lg:w-6 lg:h-6" />
@@ -49,7 +49,7 @@ export default function FloatingActions() {
 
       <a
         href="sms:010-6355-8055"
-        className="w-11 h-11 lg:w-12 lg:h-12 bg-emerald-500 rounded-full shadow-lg flex items-center justify-center text-white hover:bg-emerald-600 transition-all lg:hidden"
+        className="w-11 h-11 lg:w-12 lg:h-12 bg-secondary rounded-full shadow-lg flex items-center justify-center text-white hover:bg-secondary/90 transition-all lg:hidden"
         title="문자 문의"
       >
         <MessageSquare className="w-5 h-5 lg:w-6 lg:h-6" />

@@ -49,7 +49,7 @@ export default function Header() {
                 </Component>
               );
             })}
-            <a href="#consultation" className="bg-industrial-blue text-white px-5 py-2.5 rounded-lg text-sm font-bold hover:bg-primary transition-all shadow-md shadow-blue-900/10">
+            <a href="#consultation" className="bg-primary text-gray-900 px-5 py-2.5 rounded-lg text-sm font-bold hover:brightness-105 transition-all shadow-md shadow-primary/20">
               상담 신청하기
             </a>
           </nav>
@@ -93,7 +93,7 @@ export default function Header() {
               <div className="pt-4">
                 <a 
                   href="#consultation" 
-                  className="block w-full bg-industrial-blue text-white py-4 rounded-xl font-bold text-lg shadow-lg shadow-blue-900/10 text-center"
+                  className="block w-full bg-primary text-gray-900 py-4 rounded-xl font-bold text-lg shadow-lg shadow-primary/20 text-center"
                   onClick={() => setIsOpen(false)}
                 >
                   상담 신청하기

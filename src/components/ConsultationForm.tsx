@@ -83,7 +83,7 @@ export default function ConsultationForm({ className }: { className?: string }) 
                 type="text"
                 placeholder="회사명"
                 required
-                className="w-full pl-11 pr-4 py-3 rounded-xl border border-gray-200 outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 transition-all bg-gray-50/50"
+                className="w-full pl-11 pr-4 py-3 rounded-xl border border-gray-200 outline-none focus:ring-2 focus:ring-secondary/20 focus:border-secondary transition-all bg-gray-50/50"
                 value={formData.company}
                 onChange={(e) => setFormData({ ...formData, company: e.target.value })}
               />
@@ -99,7 +99,7 @@ export default function ConsultationForm({ className }: { className?: string }) 
                   type="text"
                   placeholder="이름"
                   required
-                  className="w-full pl-11 pr-4 py-3 rounded-xl border border-gray-200 outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 transition-all bg-gray-50/50"
+                  className="w-full pl-11 pr-4 py-3 rounded-xl border border-gray-200 outline-none focus:ring-2 focus:ring-secondary/20 focus:border-secondary transition-all bg-gray-50/50"
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                 />
@@ -114,7 +114,7 @@ export default function ConsultationForm({ className }: { className?: string }) 
                   placeholder="010-0000-0000"
                   maxLength={13}
                   required
-                  className="w-full pl-11 pr-4 py-3 rounded-xl border border-gray-200 outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 transition-all bg-gray-50/50"
+                  className="w-full pl-11 pr-4 py-3 rounded-xl border border-gray-200 outline-none focus:ring-2 focus:ring-secondary/20 focus:border-secondary transition-all bg-gray-50/50"
                   value={formData.phone}
                   onChange={handlePhoneChange}
                 />
@@ -130,7 +130,7 @@ export default function ConsultationForm({ className }: { className?: string }) 
                 type="email"
                 placeholder="email@example.com"
                 required
-                className="w-full pl-11 pr-4 py-3 rounded-xl border border-gray-200 outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 transition-all bg-gray-50/50"
+                className="w-full pl-11 pr-4 py-3 rounded-xl border border-gray-200 outline-none focus:ring-2 focus:ring-secondary/20 focus:border-secondary transition-all bg-gray-50/50"
                 value={formData.email}
                 onChange={(e) => setFormData({ ...formData, email: e.target.value })}
               />
@@ -145,7 +145,7 @@ export default function ConsultationForm({ className }: { className?: string }) 
                 placeholder="문의내용을 적어주세요"
                 rows={3}
                 required
-                className="w-full pl-11 pr-4 py-3 rounded-xl border border-gray-200 outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 transition-all bg-gray-50/50"
+                className="w-full pl-11 pr-4 py-3 rounded-xl border border-gray-200 outline-none focus:ring-2 focus:ring-secondary/20 focus:border-secondary transition-all bg-gray-50/50"
                 value={formData.inquiry}
                 onChange={(e) => setFormData({ ...formData, inquiry: e.target.value })}
               />
@@ -156,7 +156,7 @@ export default function ConsultationForm({ className }: { className?: string }) 
             <input
               type="checkbox"
               required
-              className="w-4 h-4 rounded border-gray-300 text-emerald-600 focus:ring-emerald-500"
+              className="w-4 h-4 rounded border-gray-300 text-secondary focus:ring-secondary"
               checked={formData.agreed}
               onChange={(e) => setFormData({ ...formData, agreed: e.target.checked })}
             />
@@ -167,7 +167,7 @@ export default function ConsultationForm({ className }: { className?: string }) 
             type="submit"
             disabled={isSubmitting}
             className={cn(
-              "w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-4 rounded-xl flex items-center justify-center gap-3 transition-all shadow-lg shadow-emerald-500/20 group",
+              "w-full bg-primary hover:brightness-105 text-gray-900 font-bold py-4 rounded-xl flex items-center justify-center gap-3 transition-all shadow-lg shadow-primary/20 group",
               isSubmitting && "opacity-70 cursor-not-allowed"
             )}
           >

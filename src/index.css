@@ -3,10 +3,10 @@
 @theme {
   --font-sans: "Pretendard", ui-sans-serif, system-ui, sans-serif;
   
-  --color-primary: #0056b3;
-  --color-secondary: #ff6b00;
-  --color-industrial-blue: #0056b3;
-  --color-safety-orange: #ff6b00;
+  --color-primary: #FFD100;
+  --color-secondary: #002349;
+  --color-industrial-blue: #002349;
+  --color-safety-orange: #FFD100;
   --color-bg-gray: #f8f9fa;
 }
 
