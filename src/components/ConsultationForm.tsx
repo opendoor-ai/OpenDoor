@@ -76,80 +76,65 @@ export default function ConsultationForm({ className }: { className?: string }) 
 
         <div className="space-y-4">
           <div>
-            <label className="block text-sm font-bold text-gray-700 mb-1">회사명</label>
-            <div className="relative">
-              <Building2 className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" />
-              <input
-                type="text"
-                placeholder="회사명"
-                required
-                className="w-full pl-11 pr-4 py-3 rounded-xl border border-gray-200 outline-none focus:ring-2 focus:ring-secondary/20 focus:border-secondary transition-all bg-gray-50/50"
-                value={formData.company}
-                onChange={(e) => setFormData({ ...formData, company: e.target.value })}
-              />
-            </div>
+            <label className="block text-sm font-bold text-gray-700 mb-1.5">회사명</label>
+            <input
+              type="text"
+              placeholder="회사명"
+              required
+              className="w-full px-4 py-3 rounded-xl border border-gray-200 outline-none focus:ring-2 focus:ring-secondary/20 focus:border-secondary transition-all bg-gray-50/50"
+              value={formData.company}
+              onChange={(e) => setFormData({ ...formData, company: e.target.value })}
+            />
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div>
-              <label className="block text-sm font-bold text-gray-700 mb-1">이름</label>
-              <div className="relative">
-                <User className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" />
-                <input
-                  type="text"
-                  placeholder="이름"
-                  required
-                  className="w-full pl-11 pr-4 py-3 rounded-xl border border-gray-200 outline-none focus:ring-2 focus:ring-secondary/20 focus:border-secondary transition-all bg-gray-50/50"
-                  value={formData.name}
-                  onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                />
-              </div>
+              <label className="block text-sm font-bold text-gray-700 mb-1.5">이름</label>
+              <input
+                type="text"
+                placeholder="이름"
+                required
+                className="w-full px-4 py-3 rounded-xl border border-gray-200 outline-none focus:ring-2 focus:ring-secondary/20 focus:border-secondary transition-all bg-gray-50/50"
+                value={formData.name}
+                onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+              />
             </div>
             <div>
-              <label className="block text-sm font-bold text-gray-700 mb-1">전화번호</label>
-              <div className="relative">
-                <Phone className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" />
-                <input
-                  type="tel"
-                  placeholder="010-0000-0000"
-                  maxLength={13}
-                  required
-                  className="w-full pl-11 pr-4 py-3 rounded-xl border border-gray-200 outline-none focus:ring-2 focus:ring-secondary/20 focus:border-secondary transition-all bg-gray-50/50"
-                  value={formData.phone}
-                  onChange={handlePhoneChange}
-                />
-              </div>
-            </div>
-          </div>
-
-          <div>
-            <label className="block text-sm font-bold text-gray-700 mb-1">이메일</label>
-            <div className="relative">
-              <Mail className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" />
+              <label className="block text-sm font-bold text-gray-700 mb-1.5">전화번호</label>
               <input
-                type="email"
-                placeholder="email@example.com"
+                type="tel"
+                placeholder="010-0000-0000"
+                maxLength={13}
                 required
-                className="w-full pl-11 pr-4 py-3 rounded-xl border border-gray-200 outline-none focus:ring-2 focus:ring-secondary/20 focus:border-secondary transition-all bg-gray-50/50"
-                value={formData.email}
-                onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                className="w-full px-4 py-3 rounded-xl border border-gray-200 outline-none focus:ring-2 focus:ring-secondary/20 focus:border-secondary transition-all bg-gray-50/50"
+                value={formData.phone}
+                onChange={handlePhoneChange}
               />
             </div>
           </div>
 
           <div>
-            <label className="block text-sm font-bold text-gray-700 mb-1">문의내용</label>
-            <div className="relative">
-              <MessageSquare className="absolute left-4 top-4 w-4 h-4 text-gray-400" />
-              <textarea
-                placeholder="문의내용을 적어주세요"
-                rows={3}
-                required
-                className="w-full pl-11 pr-4 py-3 rounded-xl border border-gray-200 outline-none focus:ring-2 focus:ring-secondary/20 focus:border-secondary transition-all bg-gray-50/50"
-                value={formData.inquiry}
-                onChange={(e) => setFormData({ ...formData, inquiry: e.target.value })}
-              />
-            </div>
+            <label className="block text-sm font-bold text-gray-700 mb-1.5">이메일</label>
+            <input
+              type="email"
+              placeholder="email@example.com"
+              required
+              className="w-full px-4 py-3 rounded-xl border border-gray-200 outline-none focus:ring-2 focus:ring-secondary/20 focus:border-secondary transition-all bg-gray-50/50"
+              value={formData.email}
+              onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+            />
+          </div>
+
+          <div>
+            <label className="block text-sm font-bold text-gray-700 mb-1.5">문의내용</label>
+            <textarea
+              placeholder="문의내용을 적어주세요"
+              rows={4}
+              required
+              className="w-full px-4 py-3 rounded-xl border border-gray-200 outline-none focus:ring-2 focus:ring-secondary/20 focus:border-secondary transition-all bg-gray-50/50"
+              value={formData.inquiry}
+              onChange={(e) => setFormData({ ...formData, inquiry: e.target.value })}
+            />
           </div>
 
           <label className="flex items-center gap-2 cursor-pointer pt-1">

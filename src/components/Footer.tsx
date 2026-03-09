@@ -62,12 +62,18 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="pt-10 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-white/40 text-xs">
-          <p>© 2024 OpenDoor Inc. All rights reserved.</p>
-          <div className="flex gap-6">
-            <Link to="#" className="hover:text-white">이용약관</Link>
-            <Link to="#" className="hover:text-white font-bold">개인정보처리방침</Link>
-            <Link to="#" className="hover:text-white">사업자정보확인</Link>
+        <div className="pt-10 border-t border-white/10 flex flex-col md:flex-row justify-between items-start md:items-center gap-6 text-white/40 text-[11px] leading-relaxed">
+          <div className="space-y-2">
+            <p className="text-sm font-medium">© 전자동. All rights reserved.</p>
+            <p>
+              오픈도어(OpenDoor)는 전자동이 운영하는 산업기계 정보 및 광고 플랫폼입니다.<br />
+              본 플랫폼은 상품을 직접 판매하지 않으며 상품 정보 및 거래에 대한 책임은 각 공급사에게 있습니다.
+            </p>
+          </div>
+          <div className="flex gap-6 shrink-0">
+            <Link to="#" className="hover:text-white transition-colors">이용약관</Link>
+            <Link to="#" className="hover:text-white font-bold transition-colors">개인정보처리방침</Link>
+            <Link to="#" className="hover:text-white transition-colors">사업자정보확인</Link>
           </div>
         </div>
       </div>
