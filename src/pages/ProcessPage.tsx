@@ -8,18 +8,18 @@ export default function ProcessPage() {
   const steps = [
     {
       icon: <Search className="w-10 h-10" />,
-      title: "1. 기업 및 장비 정보 등록",
-      content: "제조사, 유통사 등 기업 정보와 함께 홍보하고자 하는 신품·중고 장비의 상세 정보를 등록합니다."
+      title: "1. 회사(공급사) 정보 등록",
+      content: "입점 상담을 위해 업체명, 취급 기계·장비, 연락처 등 회사(공급사) 기본 정보를 등록합니다."
     },
     {
       icon: <FileText className="w-10 h-10" />,
       title: "2. 전용 홍보 랜딩페이지 구축",
-      content: "등록된 정보를 바탕으로 장비의 신뢰도를 높일 수 있는 고퀄리티 기업 전용 랜딩페이지를 자동으로 구축합니다."
+      content: "등록된 정보를 바탕으로 기계·장비의 신뢰도를 높일 수 있는 고퀄리티 기업 전용 랜딩페이지를 맞춤형으로 구축합니다."
     },
     {
       icon: <UserCheck className="w-10 h-10" />,
       title: "3. 타겟 노출 및 고객 유입",
-      content: "오픈도어의 타겟 마케팅 시스템을 통해 실제 장비 구매 의사가 있는 잠재 고객들에게 자사 장비를 효과적으로 노출합니다."
+      content: "오픈도어의 타겟 마케팅 시스템을 통해 실제 기계·장비 구매 의사가 있는 잠재 고객들에게 자사 기계·장비를 효과적으로 노출합니다."
     },
     {
       icon: <CreditCard className="w-10 h-10" />,
@@ -37,7 +37,7 @@ export default function ProcessPage() {
           <div className="max-w-3xl mx-auto text-center mb-20">
             <h1 className="text-4xl font-bold mb-6">홍보 및 상담 연결 프로세스</h1>
             <p className="text-gray-600 text-lg">
-              오픈도어는 기업의 장비가 가장 돋보일 수 있는 환경을 제공하고, 
+              오픈도어는 기업의 기계·장비가 가장 돋보일 수 있는 환경을 제공하고, 
               잠재 고객과의 직접적인 연결을 최우선으로 합니다.
             </p>
           </div>

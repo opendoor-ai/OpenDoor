@@ -21,11 +21,11 @@ export default function Header() {
       <div className="container mx-auto px-4 sm:px-6">
         <div className="flex items-center justify-between h-16 sm:h-20">
           <Link to="/" className="flex items-center gap-2 group shrink-0">
-            <div className="w-8 h-8 sm:w-10 sm:h-10 bg-primary rounded-lg flex items-center justify-center group-hover:bg-safety-orange transition-colors">
+            <div className="w-8 h-8 sm:w-10 sm:h-10 bg-primary rounded-lg flex items-center justify-center group-hover:bg-amber-600 transition-colors">
               <DoorOpen className="text-white w-5 h-5 sm:w-6 sm:h-6" />
             </div>
             <span className="text-xl sm:text-2xl font-bold tracking-tighter text-industrial-blue">
-              오픈도어<span className="text-safety-orange">.</span>
+              오픈도어<span className="text-primary">.</span>
             </span>
           </Link>
 
@@ -49,7 +49,7 @@ export default function Header() {
                 </Component>
               );
             })}
-            <a href="#consultation" className="bg-primary text-gray-900 px-5 py-2.5 rounded-lg text-sm font-bold hover:brightness-105 transition-all shadow-md shadow-primary/20">
+            <a href="/#consultation-form-section" className="bg-primary text-gray-900 px-5 py-2.5 rounded-lg text-sm font-bold hover:brightness-105 transition-all shadow-md shadow-primary/20">
               상담 신청하기
             </a>
           </nav>
@@ -92,7 +92,7 @@ export default function Header() {
               })}
               <div className="pt-4">
                 <a 
-                  href="#consultation" 
+                  href="/#consultation-form-section" 
                   className="block w-full bg-primary text-gray-900 py-4 rounded-xl font-bold text-lg shadow-lg shadow-primary/20 text-center"
                   onClick={() => setIsOpen(false)}
                 >

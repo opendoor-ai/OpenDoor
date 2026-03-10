@@ -1,22 +1,23 @@
 import React from 'react';
 import { ExternalLink, Layout } from 'lucide-react';
 import { motion } from 'motion/react';
+import ConsultationForm from './ConsultationForm';
 
 export default function Portfolio() {
   const portfolios = [
     {
       title: "원공사 (Wongongsa 2)",
-      description: "레이저 장비 제조 전문 기업의 고성능 랜딩페이지입니다. 더욱 세련된 디자인과 최적화된 상담 시스템을 제공합니다.",
+      description: "레이저 기계·장비 제조 전문 기업의 고성능 랜딩페이지입니다. 더욱 세련된 디자인과 최적화된 상담 시스템을 제공합니다.",
       url: "https://wongongsa2.vercel.app/",
       image: "https://images.unsplash.com/photo-1565891741441-64926e441838?auto=format&fit=crop&q=80&w=800",
-      tags: ["레이저 장비", "제조 전문", "고성능"]
+      tags: ["레이저 기계·장비", "제조 전문", "고성능"]
     },
     {
       title: "원공사 (Wongongsa)",
       description: "정밀한 기술의 완성. 레이저 절단기, 커팅기, 용접기 전문 제조 기업의 고성능 랜딩페이지입니다.",
       url: "https://wongongsa.vercel.app/",
       image: "https://images.unsplash.com/photo-1537462715879-360eeb61a0ad?auto=format&fit=crop&q=80&w=800",
-      tags: ["레이저 장비", "정밀제조", "공식대리점"]
+      tags: ["레이저 기계·장비", "정밀제조", "공식대리점"]
     },
     {
       title: "대화상사 (Daehwa SS)",
@@ -42,7 +43,7 @@ export default function Portfolio() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12 max-w-7xl mx-auto">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12 max-w-7xl mx-auto mb-24">
           {portfolios.map((item, i) => (
             <motion.div
               key={i}
@@ -92,6 +93,46 @@ export default function Portfolio() {
               </div>
             </motion.div>
           ))}
+        </div>
+
+        {/* Consultation Form Section */}
+        <div id="consultation-form-section" className="max-w-4xl mx-auto pt-12">
+          <div className="bg-industrial-blue rounded-[3rem] p-8 md:p-16 shadow-2xl relative overflow-hidden">
+            {/* Decorative Background Element */}
+            <div className="absolute top-0 right-0 w-64 h-64 bg-primary/10 rounded-full -translate-y-1/2 translate-x-1/2 blur-3xl" />
+            
+            <div className="relative z-10 grid lg:grid-cols-5 gap-12 items-center">
+              <div className="lg:col-span-2 text-white">
+                <h3 className="text-3xl font-bold mb-6">지금 바로<br />상담을 시작하세요</h3>
+                <p className="text-white/70 mb-8 leading-relaxed">
+                  전문 상담원이 귀사의 기계·장비 특성에 맞는 최적의 홍보 전략을 제안해 드립니다.
+                </p>
+                <div className="space-y-4">
+                  <div className="flex items-center gap-3">
+                    <div className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center">
+                      <span className="text-primary font-bold text-sm">01</span>
+                    </div>
+                    <span className="text-sm">전문가 1:1 매칭</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <div className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center">
+                      <span className="text-primary font-bold text-sm">02</span>
+                    </div>
+                    <span className="text-sm">맞춤형 랜딩페이지 기획</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <div className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center">
+                      <span className="text-primary font-bold text-sm">03</span>
+                    </div>
+                    <span className="text-sm">실시간 바이어 연결</span>
+                  </div>
+                </div>
+              </div>
+              <div className="lg:col-span-3">
+                <ConsultationForm />
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>

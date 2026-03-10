@@ -1,8 +1,11 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useId } from 'react';
 import { ShieldCheck, ArrowRight, Building2, User, Phone, Mail, MessageSquare } from 'lucide-react';
 import { cn } from '../lib/utils';
 
 export default function ConsultationForm({ className }: { className?: string }) {
+  const uniqueId = useId();
+  const iframeName = `hidden_iframe_${uniqueId.replace(/:/g, '')}`;
+  
   const [formData, setFormData] = useState({
     company: '',
     name: '',
@@ -12,6 +15,7 @@ export default function ConsultationForm({ className }: { className?: string }) 
     agreed: false
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const isSubmittingRef = useRef(false);
   const iframeRef = useRef<HTMLIFrameElement>(null);
 
   const handlePhoneChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -34,12 +38,21 @@ export default function ConsultationForm({ className }: { className?: string }) 
     }
     
     setIsSubmitting(true);
+    isSubmittingRef.current = true;
+
+    // Fallback: If iframe onLoad doesn't fire for some reason, reset 후 알림
+    setTimeout(() => {
+      if (isSubmittingRef.current) {
+        handleIframeLoad();
+      }
+    }, 5000);
   };
 
   const handleIframeLoad = () => {
-    if (isSubmitting) {
+    if (isSubmittingRef.current) {
       alert("상담 접수가 성공적으로 완료되었습니다!");
       setIsSubmitting(false);
+      isSubmittingRef.current = false;
       setFormData({
         company: '',
         name: '',
@@ -48,7 +61,6 @@ export default function ConsultationForm({ className }: { className?: string }) 
         inquiry: '',
         agreed: false
       });
-      // Optional: window.location.reload();
     }
   };
 
@@ -62,7 +74,7 @@ export default function ConsultationForm({ className }: { className?: string }) 
       <form
         action="https://docs.google.com/forms/d/e/1FAIpQLSfzLvTe7lXKsZo39zx9N1Xer482rzw97x1L9eIqxZE6TJW9JA/formResponse"
         method="POST"
-        target="hidden_iframe"
+        target={iframeName}
         onSubmit={handleSubmit}
         className="space-y-4"
       >
@@ -170,8 +182,8 @@ export default function ConsultationForm({ className }: { className?: string }) 
       </form>
 
       <iframe
-        name="hidden_iframe"
-        id="hidden_iframe"
+        name={iframeName}
+        id={iframeName}
         style={{ display: 'none' }}
         ref={iframeRef}
         onLoad={handleIframeLoad}

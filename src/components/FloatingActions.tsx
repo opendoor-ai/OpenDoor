@@ -26,14 +26,11 @@ export default function FloatingActions() {
   };
 
   const scrollToConsultation = () => {
-    const element = document.getElementById('consultation');
+    const element = document.getElementById('consultation-form-section');
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     } else {
-      window.scrollTo({
-        top: document.documentElement.scrollHeight,
-        behavior: 'smooth',
-      });
+      window.location.href = '/#consultation-form-section';
     }
   };
 

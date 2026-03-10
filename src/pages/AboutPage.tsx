@@ -38,9 +38,9 @@ export default function AboutPage() {
             {/* Introduction Detail */}
             <div className="grid lg:grid-cols-2 gap-16 items-center mb-32">
               <div>
-                <h2 className="text-3xl font-bold mb-6 text-gray-900">산업용 장비의 디지털 연결</h2>
+                <h2 className="text-3xl font-bold mb-6 text-gray-900">산업용 기계·장비의 디지털 연결</h2>
                 <p className="text-lg text-gray-600 leading-relaxed mb-6">
-                  CNC, 선반, 사출기, 프레스, 가공기계 등 다양한 산업용 장비를 중심으로 공급사가 보유하거나 직접 제작·생산하는 기계를 온라인에서 효과적으로 소개하고 상담까지 이어질 수 있도록 설계되었습니다.
+                  CNC, 선반, 사출기, 프레스, 가공기계 등 다양한 산업용 기계·장비를 중심으로 공급사가 보유하거나 직접 제작·생산하는 기계를 온라인에서 효과적으로 소개하고 상담까지 이어질 수 있도록 설계되었습니다.
                 </p>
                 <div className="flex flex-wrap gap-3">
                   {['CNC', '선반', '사출기', '프레스', '가공기계'].map((tag) => (
@@ -65,7 +65,7 @@ export default function AboutPage() {
               <div className="max-w-3xl">
                 <h2 className="text-3xl font-bold mb-8 text-gray-900">오픈도어의 역할</h2>
                 <p className="text-xl text-gray-700 leading-relaxed mb-12">
-                  오픈도어는 단순한 제품 나열형 사이트가 아니라 <span className="font-bold">공급사의 강점과 보유 장비를 명확히 보여주는 구조</span>를 기반으로 구매자가 필요한 정보를 빠르게 확인하고 업체와 직접 상담을 진행할 수 있도록 돕습니다.
+                  오픈도어는 단순한 제품 나열형 사이트가 아니라 <span className="font-bold">공급사의 강점과 보유 기계·장비를 명확히 보여주는 구조</span>를 기반으로 구매자가 필요한 정보를 빠르게 확인하고 업체와 직접 상담을 진행할 수 있도록 돕습니다.
                 </p>
                 <div className="grid md:grid-cols-2 gap-8">
                   <div className="bg-white p-8 rounded-2xl shadow-sm">
@@ -105,7 +105,7 @@ export default function AboutPage() {
                   오픈도어는 공급사에는 신뢰 기반의 홍보 채널을, 구매자에게는 명확한 선택 기준을 제공하는 것을 목표로 합니다.
                 </p>
                 <p className="text-lg text-gray-600 leading-relaxed">
-                  과장된 광고보다 실제 취급 장비와 업체 정보에 집중하여 산업 현장에서 바로 활용 가능한 <span className="font-bold text-gray-900">실질적인 연결 플랫폼</span>을 지향합니다.
+                  과장된 광고보다 실제 취급 기계·장비와 업체 정보에 집중하여 산업 현장에서 바로 활용 가능한 <span className="font-bold text-gray-900">실질적인 연결 플랫폼</span>을 지향합니다.
                 </p>
               </div>
             </div>
@@ -127,6 +127,39 @@ export default function AboutPage() {
                     <span className="font-bold text-gray-900">{item.title}</span>
                   </div>
                 ))}
+              </div>
+            </div>
+
+            {/* Company Information */}
+            <div className="border-t border-gray-100 pt-24 mb-24">
+              <h2 className="text-3xl font-bold mb-12 text-center text-gray-900">사업자 정보</h2>
+              <div className="bg-gray-50 rounded-3xl p-8 md:p-12">
+                <div className="grid md:grid-cols-2 gap-8">
+                  <div className="space-y-4">
+                    <div className="flex justify-between border-b border-gray-200 pb-2">
+                      <span className="text-gray-500">운영사</span>
+                      <span className="font-bold text-gray-900">전자동</span>
+                    </div>
+                    <div className="flex justify-between border-b border-gray-200 pb-2">
+                      <span className="text-gray-500">대표자</span>
+                      <span className="font-bold text-gray-900">한상덕</span>
+                    </div>
+                    <div className="flex justify-between border-b border-gray-200 pb-2">
+                      <span className="text-gray-500">사업자등록번호</span>
+                      <span className="font-bold text-gray-900">156-59-00878</span>
+                    </div>
+                  </div>
+                  <div className="space-y-4">
+                    <div className="flex flex-col border-b border-gray-200 pb-2">
+                      <span className="text-gray-500 mb-1">주소</span>
+                      <span className="font-bold text-gray-900">서울특별시 강서구 화곡로66길 192, 1층(등촌동)</span>
+                    </div>
+                    <div className="flex flex-col border-b border-gray-200 pb-2">
+                      <span className="text-gray-500 mb-1">이메일</span>
+                      <span className="font-bold text-gray-900">opendoor@jeonjadong.com</span>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
 

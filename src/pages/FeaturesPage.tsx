@@ -7,8 +7,8 @@ export default function FeaturesPage() {
   const features = [
     {
       icon: <Layout className="w-8 h-8" />,
-      title: "자동 랜딩페이지 생성",
-      description: "기계 사진과 기본 정보만 입력하면, 바이어를 유혹하는 전문 랜딩페이지가 즉시 생성됩니다."
+      title: "전용 랜딩페이지 구축",
+      description: "기계 사진과 기본 정보만 입력하면, 바이어를 유혹하는 전문 랜딩페이지를 맞춤형으로 구축해 드립니다."
     },
     {
       icon: <Bell className="w-8 h-8" />,

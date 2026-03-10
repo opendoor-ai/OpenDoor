@@ -10,7 +10,7 @@ export default function Footer() {
           <div className="col-span-1 md:col-span-1">
             <Link to="/" className="flex items-center gap-2 mb-6">
               <div className="w-8 h-8 bg-white rounded flex items-center justify-center">
-                <DoorOpen className="text-industrial-blue w-5 h-5" />
+                <DoorOpen className="text-primary w-5 h-5" />
               </div>
               <span className="text-xl font-bold tracking-tighter">오픈도어</span>
             </Link>
@@ -43,7 +43,7 @@ export default function Footer() {
               </li>
               <li className="flex items-center gap-2">
                 <MapPin className="w-4 h-4" />
-                <span>서울특별시 강서구 화곡로66길 192. 1층(등촌동)</span>
+                <span>서울특별시 강서구 화곡로66길 192, 1층(등촌동)</span>
               </li>
             </ul>
           </div>
@@ -65,6 +65,12 @@ export default function Footer() {
         <div className="pt-10 border-t border-white/10 flex flex-col md:flex-row justify-between items-start md:items-center gap-6 text-white/40 text-[11px] leading-relaxed">
           <div className="space-y-2">
             <p className="text-sm font-medium">© 전자동. All rights reserved.</p>
+            <div className="flex flex-wrap gap-x-4 gap-y-1">
+              <span>운영사 : 전자동</span>
+              <span>대표자 : 한상덕</span>
+              <span>사업자등록번호 : 156-59-00878</span>
+            </div>
+            <p>주소 : 서울특별시 강서구 화곡로66길 192, 1층(등촌동)</p>
             <p>
               오픈도어(OpenDoor)는 전자동이 운영하는 산업기계 정보 및 광고 플랫폼입니다.<br />
               본 플랫폼은 상품을 직접 판매하지 않으며 상품 정보 및 거래에 대한 책임은 각 공급사에게 있습니다.
