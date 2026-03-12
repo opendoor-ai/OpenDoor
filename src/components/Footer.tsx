@@ -74,19 +74,29 @@ export default function Footer() {
             </div>
             
             {/* View Mode Toggle */}
-            <div className="flex items-center gap-2 bg-white/5 p-1 rounded-lg border border-white/10">
+            <div className={`flex items-center gap-2 bg-white/5 p-1 rounded-lg border border-white/10 ${viewMode === 'pc' ? 'p-4 gap-6 rounded-3xl border-2' : ''}`}>
               <button 
                 onClick={() => setViewMode('pc')}
-                className={`flex items-center gap-1.5 px-3 py-1.5 rounded-md transition-all ${viewMode === 'pc' ? 'bg-primary text-secondary font-bold' : 'hover:bg-white/10'}`}
+                className={`flex items-center gap-1.5 px-3 py-1.5 rounded-md transition-all ${
+                  viewMode === 'pc' 
+                    ? 'bg-primary text-secondary font-bold px-12 py-6 text-3xl rounded-2xl gap-4' 
+                    : 'hover:bg-white/10'
+                }`}
               >
-                <Monitor className="w-3.5 h-3.5" />
+                <Monitor className={viewMode === 'pc' ? 'w-10 h-10' : 'w-3.5 h-3.5'} />
                 <span>PC화면</span>
               </button>
               <button 
                 onClick={() => setViewMode('mobile')}
-                className={`flex items-center gap-1.5 px-3 py-1.5 rounded-md transition-all ${viewMode === 'mobile' ? 'bg-primary text-secondary font-bold' : 'hover:bg-white/10'}`}
+                className={`flex items-center gap-1.5 px-3 py-1.5 rounded-md transition-all ${
+                  viewMode === 'mobile' 
+                    ? 'bg-primary text-secondary font-bold' 
+                    : viewMode === 'pc'
+                      ? 'px-12 py-6 text-3xl rounded-2xl gap-4 hover:bg-white/10'
+                      : 'hover:bg-white/10'
+                }`}
               >
-                <Smartphone className="w-3.5 h-3.5" />
+                <Smartphone className={viewMode === 'pc' ? 'w-10 h-10' : 'w-3.5 h-3.5'} />
                 <span>모바일화면</span>
               </button>
             </div>

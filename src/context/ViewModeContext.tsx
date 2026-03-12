@@ -14,11 +14,9 @@ export function ViewModeProvider({ children }: { children: React.ReactNode }) {
   const [viewMode, setViewModeState] = useState<ViewMode>('mobile');
 
   useEffect(() => {
-    const savedMode = localStorage.getItem('viewMode') as ViewMode;
-    if (savedMode) {
-      setViewModeState(savedMode);
-      applyViewMode(savedMode);
-    }
+    // Always default to mobile on fresh load
+    setViewModeState('mobile');
+    applyViewMode('mobile');
   }, []);
 
   const applyViewMode = (mode: ViewMode) => {
@@ -38,7 +36,6 @@ export function ViewModeProvider({ children }: { children: React.ReactNode }) {
 
   const setViewMode = (mode: ViewMode) => {
     setViewModeState(mode);
-    localStorage.setItem('viewMode', mode);
     applyViewMode(mode);
   };
 
