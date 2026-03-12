@@ -1,7 +1,8 @@
 import React from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import { Layout, Bell, Info, ShieldAlert, Settings, CreditCard, Globe2, Link } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { Layout, Bell, Info, ShieldAlert, Settings, CreditCard, Globe2, Link as LinkIcon, ArrowRight } from 'lucide-react';
 
 export default function FeaturesPage() {
   const features = [
@@ -39,7 +40,7 @@ export default function FeaturesPage() {
       content: "월 이용료는 광고비나 유지보수비가 아닌, 전용 페이지의 지속적인 운영과 상담 연결 및 노출 관리 구조를 이용하는 플랫폼 이용료입니다."
     },
     {
-      icon: <Link className="w-5 h-5 text-indigo-500" />,
+      icon: <LinkIcon className="w-5 h-5 text-indigo-500" />,
       title: "운영 환경 및 응대",
       content: "모든 랜딩페이지는 오픈도어 내에서만 운영되며 외부 도메인 연결은 제공하지 않습니다. 상담 응대 및 계약 체결은 공급사가 직접 수행합니다."
     }
@@ -53,7 +54,7 @@ export default function FeaturesPage() {
         <div className="container mx-auto px-6">
           <div className="text-center mb-20">
             <h1 className="text-3xl md:text-4xl font-bold mb-6 leading-tight">
-              오픈도어는 <br />
+              오픈도어는 <br className="hidden md:block" />
               산업용 기계 신품·중고를 취급하는 기업을 위한 <br />
               <span className="text-primary">홍보 · 노출 · 상담 연결</span>에 특화된 플랫폼입니다.
             </h1>
@@ -102,6 +103,21 @@ export default function FeaturesPage() {
                 기계 중심의 구조를 통해 구매자와 공급사를 직접 연결합니다.
               </p>
             </div>
+          </div>
+
+          {/* Closing Banner */}
+          <div className="mt-24 text-center py-20 bg-primary rounded-[3rem] text-gray-900">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">오픈도어(OpenDoor)</h2>
+            <p className="text-xl md:text-2xl opacity-90 mb-8">
+              산업용 기계 거래의 시작을 여는<br />
+              실무 중심 B2B 플랫폼입니다.
+            </p>
+            <Link 
+              to="/#consultation"
+              className="inline-flex items-center gap-2 bg-secondary text-white px-8 py-4 rounded-xl font-bold hover:bg-secondary/90 transition-colors shadow-xl"
+            >
+              상담 접수하기 <ArrowRight className="w-5 h-5" />
+            </Link>
           </div>
 
         </div>

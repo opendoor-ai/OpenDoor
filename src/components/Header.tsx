@@ -41,7 +41,7 @@ export default function Header() {
                   key={item.path}
                   {...props}
                   className={cn(
-                    "text-sm font-semibold transition-colors hover:text-primary whitespace-nowrap",
+                    "text-sm font-semibold transition-colors duration-100 hover:text-primary whitespace-nowrap",
                     location.pathname === item.path ? "text-primary" : "text-gray-600"
                   )}
                 >
@@ -49,7 +49,7 @@ export default function Header() {
                 </Component>
               );
             })}
-            <a href="/#consultation-form-section" className="bg-primary text-gray-900 px-5 py-2.5 rounded-lg text-sm font-bold hover:brightness-105 transition-all shadow-md shadow-primary/20">
+            <a href="/#consultation-form-section" className="bg-primary text-gray-900 px-5 py-2.5 rounded-lg text-sm font-bold hover:brightness-105 transition-all duration-100 shadow-md shadow-primary/20">
               상담 신청하기
             </a>
           </nav>

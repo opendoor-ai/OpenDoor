@@ -65,7 +65,7 @@ export default function ConsultationForm({ className }: { className?: string }) 
   };
 
   return (
-    <div className={cn("bg-white p-5 sm:p-8 rounded-3xl shadow-2xl border border-gray-100", className)}>
+    <div className={cn("bg-white px-4 py-7 sm:p-8 rounded-2xl sm:rounded-3xl shadow-2xl border border-gray-100", className)}>
       <div className="mb-6 text-center">
         <h3 className="text-2xl font-bold text-gray-900 mb-2">상담 접수</h3>
         <p className="text-gray-500 text-sm">내용을 남겨주시면 빠르게 연락드립니다.</p>
@@ -164,12 +164,12 @@ export default function ConsultationForm({ className }: { className?: string }) 
             type="submit"
             disabled={isSubmitting}
             className={cn(
-              "w-full bg-primary hover:brightness-105 text-gray-900 font-bold py-4 rounded-xl flex items-center justify-center gap-3 transition-all shadow-lg shadow-primary/20 group",
+              "w-full bg-primary hover:brightness-105 text-gray-900 font-bold py-4 rounded-xl flex items-center justify-center gap-3 transition-all duration-100 shadow-lg shadow-primary/20 group",
               isSubmitting && "opacity-70 cursor-not-allowed"
             )}
           >
             <span className="text-lg">{isSubmitting ? "전송 중..." : "상담 접수하기"}</span>
-            {!isSubmitting && <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />}
+            {!isSubmitting && <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-100" />}
           </button>
 
           <div className="flex items-center justify-center gap-2 mt-4">

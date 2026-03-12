@@ -1,8 +1,9 @@
 import React from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import { Link } from 'react-router-dom';
 import { motion } from 'motion/react';
-import { Search, FileText, UserCheck, CreditCard } from 'lucide-react';
+import { Search, FileText, UserCheck, CreditCard, ArrowRight } from 'lucide-react';
 
 export default function ProcessPage() {
   const steps = [
@@ -60,6 +61,21 @@ export default function ProcessPage() {
                 </div>
               </motion.div>
             ))}
+          </div>
+
+          {/* Closing Banner */}
+          <div className="mt-24 text-center py-20 bg-primary rounded-[3rem] text-gray-900">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">오픈도어(OpenDoor)</h2>
+            <p className="text-xl md:text-2xl opacity-90 mb-8">
+              산업용 기계 거래의 시작을 여는<br />
+              실무 중심 B2B 플랫폼입니다.
+            </p>
+            <Link 
+              to="/#consultation"
+              className="inline-flex items-center gap-2 bg-secondary text-white px-8 py-4 rounded-xl font-bold hover:bg-secondary/90 transition-colors shadow-xl"
+            >
+              상담 접수하기 <ArrowRight className="w-5 h-5" />
+            </Link>
           </div>
         </div>
       </section>

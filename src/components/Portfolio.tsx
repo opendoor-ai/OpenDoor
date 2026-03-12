@@ -30,7 +30,7 @@ export default function Portfolio() {
 
   return (
     <section id="portfolio" className="py-24 bg-white">
-      <div className="container mx-auto px-6">
+      <div className="container mx-auto px-4 sm:px-6">
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/5 text-primary text-sm font-bold mb-4">
             <Layout className="w-4 h-4" />
@@ -97,7 +97,7 @@ export default function Portfolio() {
 
         {/* Consultation Form Section */}
         <div id="consultation-form-section" className="max-w-4xl mx-auto pt-12">
-          <div className="bg-industrial-blue rounded-[3rem] p-8 md:p-16 shadow-2xl relative overflow-hidden">
+          <div className="bg-industrial-blue rounded-[2rem] sm:rounded-[3rem] px-4 py-10 sm:p-12 md:p-16 shadow-2xl relative overflow-hidden">
             {/* Decorative Background Element */}
             <div className="absolute top-0 right-0 w-64 h-64 bg-primary/10 rounded-full -translate-y-1/2 translate-x-1/2 blur-3xl" />
             

@@ -17,8 +17,9 @@ export default function BrandMission() {
             </span>
             
             <h2 className="text-lg md:text-3xl lg:text-4xl font-bold text-gray-900 leading-[1.6] mb-10 tracking-tight">
-              오픈도어는 <span className="text-secondary border-b-4 border-primary pb-1 whitespace-nowrap">“광고 플랫폼”</span>이 아닌 <br className="hidden md:block" />
-              실제 거래가 시작되는 <span className="bg-primary text-secondary px-4 py-1.5 rounded-2xl inline-block shadow-sm whitespace-nowrap">입구(Open Door)</span>가 되는 것을 목표로 합니다.
+              오픈도어는 단순한 “광고 플랫폼”이 아닌 <br />
+              실제 거래가 시작되는 입구(Open Door) <br className="lg:hidden" />
+              가 되는 것을 목표로 합니다.
             </h2>
             
             <div className="w-20 h-1 bg-primary mx-auto rounded-full"></div>

@@ -23,7 +23,7 @@ export default function ValueProp() {
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 text-gray-900">왜 오픈도어인가요?</h2>
         <p className="text-gray-600 max-w-2xl mx-auto text-lg leading-relaxed">
           기존의 번거로운 기계 매매 방식을 혁신했습니다.<br className="hidden sm:block" />
-          오픈도어는 독보적인 기술을 통해 가장 빠르고 안전한 연결을 보장합니다.
+          “장비는 등록하고, 고객은 연결됩니다.”
         </p>
       </div>
 

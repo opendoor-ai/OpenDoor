@@ -6,7 +6,7 @@ export default function Footer() {
   return (
     <footer className="bg-industrial-blue text-white pt-20 pb-10">
       <div className="container mx-auto px-6">
-        <div className="grid md:grid-cols-4 gap-12 mb-16">
+        <div className="grid md:grid-cols-3 gap-12 mb-16">
           <div className="col-span-1 md:col-span-1">
             <Link to="/" className="flex items-center gap-2 mb-6">
               <div className="w-8 h-8 bg-white rounded flex items-center justify-center">
@@ -23,10 +23,10 @@ export default function Footer() {
           <div>
             <h4 className="font-bold mb-6">서비스</h4>
             <ul className="space-y-4 text-white/60 text-sm">
-              <li><Link to="/process" className="hover:text-white">매매 프로세스</Link></li>
+              <li><Link to="/process" className="hover:text-white">홍보 및 상담 연결 프로세스</Link></li>
               <li><Link to="/features" className="hover:text-white">기능/서비스</Link></li>
               <li><Link to="/support" className="hover:text-white">자주 묻는 질문</Link></li>
-              <li><Link to="/support" className="hover:text-white">1:1 문의하기</Link></li>
+              <li><a href="/#consultation-form-section" className="hover:text-white">상담 접수하기</a></li>
             </ul>
           </div>
 
@@ -46,19 +46,6 @@ export default function Footer() {
                 <span>서울특별시 강서구 화곡로66길 192, 1층(등촌동)</span>
               </li>
             </ul>
-          </div>
-
-          <div>
-            <h4 className="font-bold mb-6">뉴스레터 구독</h4>
-            <p className="text-white/60 text-xs mb-4">매주 업데이트되는 산업 기계 시세 리포트를 받아보세요.</p>
-            <div className="flex gap-2">
-              <input 
-                type="email" 
-                placeholder="이메일 주소" 
-                className="bg-white/10 border border-white/20 rounded px-3 py-2 text-sm w-full outline-none focus:border-safety-orange"
-              />
-              <button className="bg-safety-orange px-4 py-2 rounded text-sm font-bold">구독</button>
-            </div>
           </div>
         </div>
 

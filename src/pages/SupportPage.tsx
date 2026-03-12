@@ -97,10 +97,10 @@ export default function SupportPage() {
       
       <section className="py-24">
         <div className="container mx-auto px-6 max-w-4xl">
-          <div className="text-center mb-16">
-            <h1 className="text-4xl font-bold mb-4">무엇을 도와드릴까요?</h1>
-            <p className="text-gray-600">자주 묻는 질문을 확인하거나 1:1 문의를 남겨주세요.</p>
-          </div>
+            <div className="text-center mb-16">
+              <h1 className="text-4xl font-bold mb-4">무엇을 도와드릴까요?</h1>
+              <p className="text-gray-600">자주 묻는 질문을 확인하거나 상담을 신청해주세요.</p>
+            </div>
 
           <div className="space-y-16 mb-24">
             {faqSections.map((section, sectionIdx) => (
@@ -137,9 +137,9 @@ export default function SupportPage() {
           <div className="grid md:grid-cols-2 gap-8">
             <div className="p-8 rounded-3xl bg-primary text-gray-900 text-center">
               <MessageSquare className="w-12 h-12 mx-auto mb-6" />
-              <h3 className="text-2xl font-bold mb-4">1:1 문의하기</h3>
-              <p className="text-gray-900/80 mb-8">궁금하신 점을 남겨주시면 <br />24시간 이내에 답변 드립니다.</p>
-              <button className="bg-secondary text-white px-8 py-3 rounded-xl font-bold w-full">문의 작성</button>
+              <h3 className="text-2xl font-bold mb-4">상담 접수하기</h3>
+              <p className="text-gray-900/80 mb-8">궁금하신 점을 남겨주시면 <br />빠르게 연락 드립니다.</p>
+              <a href="/#consultation-form-section" className="bg-secondary text-white px-8 py-3 rounded-xl font-bold w-full inline-block">상담 신청</a>
             </div>
             <div className="p-8 rounded-3xl bg-gray-50 border border-gray-100 text-center">
               <Phone className="w-12 h-12 mx-auto mb-6 text-primary" />
