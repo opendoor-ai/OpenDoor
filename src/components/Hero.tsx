@@ -71,7 +71,7 @@ export default function Hero() {
             <div className="bg-white/10 backdrop-blur-xl border border-white/20 p-12 rounded-[3.5rem] text-center w-full shadow-2xl relative overflow-hidden group">
               <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent opacity-50" />
               <div className="relative z-10">
-                <h3 className="text-2xl font-bold text-white mb-6">성공적인 매매의 시작</h3>
+                <h3 className="text-2xl font-bold text-white mb-6">성공적인 거래의 시작</h3>
                 <p className="text-white/70 mb-10 leading-relaxed text-lg">
                   오픈도어와 함께라면 기계·장비 홍보부터<br />
                   실제 상담 연결까지 막힘없이 진행됩니다.

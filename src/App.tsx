@@ -6,20 +6,23 @@ import AboutPage from './pages/AboutPage';
 import SupportPage from './pages/SupportPage';
 import FloatingActions from './components/FloatingActions';
 import { motion, AnimatePresence } from 'motion/react';
+import { ViewModeProvider } from './context/ViewModeContext';
 
 export default function App() {
   return (
-    <Router>
-      <AnimatePresence mode="wait">
-        <Routes>
-          <Route path="/" element={<MainPage />} />
-          <Route path="/process" element={<ProcessPage />} />
-          <Route path="/features" element={<FeaturesPage />} />
-          <Route path="/about" element={<AboutPage />} />
-          <Route path="/support" element={<SupportPage />} />
-        </Routes>
-      </AnimatePresence>
-      <FloatingActions />
-    </Router>
+    <ViewModeProvider>
+      <Router>
+        <AnimatePresence mode="wait">
+          <Routes>
+            <Route path="/" element={<MainPage />} />
+            <Route path="/process" element={<ProcessPage />} />
+            <Route path="/features" element={<FeaturesPage />} />
+            <Route path="/about" element={<AboutPage />} />
+            <Route path="/support" element={<SupportPage />} />
+          </Routes>
+        </AnimatePresence>
+        <FloatingActions />
+      </Router>
+    </ViewModeProvider>
   );
 }

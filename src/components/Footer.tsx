@@ -1,8 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { DoorOpen, Mail, Phone, MapPin } from 'lucide-react';
+import { DoorOpen, Mail, Phone, MapPin, Monitor, Smartphone } from 'lucide-react';
+import { useViewMode } from '../context/ViewModeContext';
 
 export default function Footer() {
+  const { viewMode, setViewMode } = useViewMode();
+
   return (
     <footer className="bg-industrial-blue text-white pt-20 pb-10">
       <div className="container mx-auto px-6">
@@ -63,10 +66,30 @@ export default function Footer() {
               본 플랫폼은 상품을 직접 판매하지 않으며 상품 정보 및 거래에 대한 책임은 각 공급사에게 있습니다.
             </p>
           </div>
-          <div className="flex gap-6 shrink-0">
-            <Link to="#" className="hover:text-white transition-colors">이용약관</Link>
-            <Link to="#" className="hover:text-white font-bold transition-colors">개인정보처리방침</Link>
-            <Link to="#" className="hover:text-white transition-colors">사업자정보확인</Link>
+          <div className="flex flex-col items-end gap-4">
+            <div className="flex gap-6 shrink-0">
+              <Link to="#" className="hover:text-white transition-colors">이용약관</Link>
+              <Link to="#" className="hover:text-white font-bold transition-colors">개인정보처리방침</Link>
+              <Link to="#" className="hover:text-white transition-colors">사업자정보확인</Link>
+            </div>
+            
+            {/* View Mode Toggle */}
+            <div className="flex items-center gap-2 bg-white/5 p-1 rounded-lg border border-white/10">
+              <button 
+                onClick={() => setViewMode('pc')}
+                className={`flex items-center gap-1.5 px-3 py-1.5 rounded-md transition-all ${viewMode === 'pc' ? 'bg-primary text-secondary font-bold' : 'hover:bg-white/10'}`}
+              >
+                <Monitor className="w-3.5 h-3.5" />
+                <span>PC화면</span>
+              </button>
+              <button 
+                onClick={() => setViewMode('mobile')}
+                className={`flex items-center gap-1.5 px-3 py-1.5 rounded-md transition-all ${viewMode === 'mobile' ? 'bg-primary text-secondary font-bold' : 'hover:bg-white/10'}`}
+              >
+                <Smartphone className="w-3.5 h-3.5" />
+                <span>모바일화면</span>
+              </button>
+            </div>
           </div>
         </div>
       </div>
