@@ -15,6 +15,7 @@ export default function ConsultationForm({ className }: { className?: string }) 
     agreed: false
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [showPrivacy, setShowPrivacy] = useState(false);
   const isSubmittingRef = useRef(false);
   const iframeRef = useRef<HTMLIFrameElement>(null);
 
@@ -149,16 +150,25 @@ export default function ConsultationForm({ className }: { className?: string }) 
             />
           </div>
 
-          <label className="flex items-center gap-2 cursor-pointer pt-1">
-            <input
-              type="checkbox"
-              required
-              className="w-4 h-4 rounded border-gray-300 text-secondary focus:ring-secondary"
-              checked={formData.agreed}
-              onChange={(e) => setFormData({ ...formData, agreed: e.target.checked })}
-            />
-            <span className="text-xs text-gray-600">개인정보 수집 및 이용 동의 (필수)</span>
-          </label>
+          <div className="flex items-center justify-between pt-1">
+            <label className="flex items-center gap-2 cursor-pointer">
+              <input
+                type="checkbox"
+                required
+                className="w-4 h-4 rounded border-gray-300 text-secondary focus:ring-secondary"
+                checked={formData.agreed}
+                onChange={(e) => setFormData({ ...formData, agreed: e.target.checked })}
+              />
+              <span className="text-xs text-gray-600">개인정보 수집 및 이용 동의 (필수)</span>
+            </label>
+            <button
+              type="button"
+              onClick={() => setShowPrivacy(true)}
+              className="text-[10px] text-gray-400 underline hover:text-gray-600"
+            >
+              내용보기
+            </button>
+          </div>
 
           <button
             type="submit"
@@ -180,6 +190,64 @@ export default function ConsultationForm({ className }: { className?: string }) 
           </div>
         </div>
       </form>
+
+      {/* Privacy Policy Modal */}
+      {showPrivacy && (
+        <div className="fixed inset-0 z-[200] flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm">
+          <div className="bg-white rounded-2xl w-full max-w-md overflow-hidden shadow-2xl animate-in fade-in zoom-in duration-200">
+            <div className="p-6 border-b border-gray-100 flex justify-between items-center">
+              <h4 className="font-bold text-gray-900">개인정보 수집 및 이용 동의</h4>
+              <button 
+                onClick={() => setShowPrivacy(false)}
+                className="text-gray-400 hover:text-gray-600 text-2xl leading-none"
+              >&times;</button>
+            </div>
+            <div className="p-6 max-h-[60vh] overflow-y-auto text-sm text-gray-600 leading-relaxed space-y-4">
+              <p>오픈도어는 원활한 상담 및 서비스 제공을 위해 아래와 같이 개인정보를 수집하고 있습니다.</p>
+              
+              <div className="space-y-2">
+                <p className="font-bold text-gray-800">1. 수집하는 개인정보 항목</p>
+                <ul className="list-disc pl-5 space-y-1">
+                  <li>필수항목: 회사명, 이름, 연락처, 이메일, 문의내용</li>
+                </ul>
+              </div>
+
+              <div className="space-y-2">
+                <p className="font-bold text-gray-800">2. 개인정보의 수집 및 이용 목적</p>
+                <ul className="list-disc pl-5 space-y-1">
+                  <li>상담 신청에 따른 본인 확인 및 서비스 안내</li>
+                  <li>기계·장비 홍보 및 매칭 관련 상담 연결</li>
+                </ul>
+              </div>
+
+              <div className="space-y-2">
+                <p className="font-bold text-gray-800">3. 개인정보의 보유 및 이용 기간</p>
+                <ul className="list-disc pl-5 space-y-1">
+                  <li>상담 및 서비스 제공 목적 달성 후 1년</li>
+                  <li>단, 관계 법령의 규정에 의하여 보존할 필요가 있는 경우 해당 기간 동안 보관합니다.</li>
+                </ul>
+              </div>
+
+              <div className="space-y-2">
+                <p className="font-bold text-gray-800">4. 동의 거부 권리 및 불이익</p>
+                <p>귀하는 개인정보 수집 및 이용에 대한 동의를 거부할 권리가 있습니다. 다만, 동의 거부 시 상담 신청 및 서비스 이용이 제한될 수 있습니다.</p>
+              </div>
+
+              <p className="text-[11px] text-gray-400 pt-4 border-t border-gray-50">
+                운영사: 전자동 (상호: 전자동)
+              </p>
+            </div>
+            <div className="p-4 bg-gray-50 border-t border-gray-100">
+              <button 
+                onClick={() => setShowPrivacy(false)}
+                className="w-full py-3 bg-gray-900 text-white font-bold rounded-xl hover:bg-gray-800 transition-colors"
+              >
+                확인
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
 
       <iframe
         name={iframeName}

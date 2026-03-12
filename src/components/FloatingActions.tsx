@@ -25,13 +25,11 @@ export default function FloatingActions() {
     });
   };
 
-  const scrollToConsultation = () => {
-    const element = document.getElementById('consultation-form-section');
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    } else {
-      window.location.href = '/#consultation-form-section';
-    }
+  const scrollToBottom = () => {
+    window.scrollTo({
+      top: document.documentElement.scrollHeight,
+      behavior: 'smooth',
+    });
   };
 
   return (
@@ -53,7 +51,7 @@ export default function FloatingActions() {
       </a>
 
       <a
-        href="https://pf.kakao.com"
+        href="https://pf.kakao.com/_xfvyxmn/chat"
         target="_blank"
         rel="noopener noreferrer"
         className="w-11 h-11 lg:w-12 lg:h-12 bg-[#FEE500] rounded-full shadow-lg flex items-center justify-center text-[#3c1e1e] hover:brightness-95 transition-all"
@@ -78,9 +76,9 @@ export default function FloatingActions() {
       </AnimatePresence>
 
       <button
-        onClick={scrollToConsultation}
+        onClick={scrollToBottom}
         className="w-11 h-11 lg:w-12 lg:h-12 bg-white border border-gray-200 rounded-full shadow-lg flex items-center justify-center text-gray-600 hover:bg-gray-50 transition-colors"
-        title="상담 신청하기"
+        title="맨 아래로"
       >
         <ChevronDown className="w-5 h-5 lg:w-6 lg:h-6" />
       </button>
