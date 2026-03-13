@@ -56,7 +56,7 @@ export default function Portfolio() {
               <div className="relative aspect-[4/3] overflow-hidden">
                 <img
                   src={item.image}
-                  alt={item.title}
+                  alt={`${item.title} - 산업용 중고기계`}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   referrerPolicy="no-referrer"
                 />

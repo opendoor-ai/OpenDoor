@@ -1,0 +1,30 @@
+{
+  "short_name": "오픈도어",
+  "name": "오픈도어 - 중고기계 전문 플랫폼",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "type": "image/svg+xml",
+      "sizes": "any",
+      "purpose": "any"
+    },
+    {
+      "src": "/favicon.svg",
+      "type": "image/svg+xml",
+      "sizes": "192x192",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/favicon.svg",
+      "type": "image/svg+xml",
+      "sizes": "512x512",
+      "purpose": "maskable"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#0F172A",
+  "display": "standalone",
+  "scope": "/",
+  "theme_color": "#F59E0B",
+  "description": "산업용 중고기계 매매 전문 플랫폼 전자동 오픈도어"
+}

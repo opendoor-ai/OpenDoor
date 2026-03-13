@@ -76,7 +76,7 @@ export default function HowItWorks() {
               <div className={`h-48 overflow-hidden relative ${bgMap[step.color as keyof typeof bgMap]}`}>
                 <img 
                   src={step.image} 
-                  alt={step.title}
+                  alt={`${step.title} - 산업용 중고기계`}
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                   referrerPolicy="no-referrer"
                 />

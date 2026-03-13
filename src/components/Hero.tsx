@@ -16,7 +16,7 @@ export default function Hero() {
       <div className="absolute inset-0 z-0">
         <img
           src="https://images.unsplash.com/photo-1537462715879-360eeb61a0ad?auto=format&fit=crop&q=80&w=1600"
-          alt="Industrial Machinery"
+          alt="산업용 중고기계 매매 전문 플랫폼 전자동 오픈도어"
           className="w-full h-full object-cover"
           referrerPolicy="no-referrer"
         />
@@ -34,8 +34,8 @@ export default function Hero() {
             className="text-left order-1"
           >
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.1] mb-8 tracking-tight">
-              산업용 기계 홍보부터<br />
-              <span className="text-primary">상담 연결</span>까지 한 번에.
+              중고기계매매 전문 플랫폼<br />
+              <span className="text-primary">전자동 | 오픈도어</span>
             </h1>
             <p className="text-lg sm:text-xl text-white/80 mb-12 max-w-2xl leading-relaxed">
               제조사·유통사·장비 보유 기업을 위한 산업장비 플랫폼<br />
