@@ -10,7 +10,9 @@ export default function ConsultationForm({ className }: { className?: string }) 
     company: '',
     name: '',
     phone: '',
-    email: '',
+    emailId: '',
+    emailDomain: '@naver.com',
+    customDomain: '',
     inquiry: '',
     agreed: false
   });
@@ -18,6 +20,10 @@ export default function ConsultationForm({ className }: { className?: string }) 
   const [showPrivacy, setShowPrivacy] = useState(false);
   const isSubmittingRef = useRef(false);
   const iframeRef = useRef<HTMLIFrameElement>(null);
+
+  const fullEmail = formData.emailDomain === 'manual' 
+    ? `${formData.emailId}${formData.customDomain ? (formData.customDomain.startsWith('@') ? formData.customDomain : '@' + formData.customDomain) : ''}`
+    : `${formData.emailId}${formData.emailDomain}`;
 
   const handlePhoneChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     let val = e.target.value.replace(/[^0-9]/g, "");
@@ -32,7 +38,7 @@ export default function ConsultationForm({ className }: { className?: string }) 
 
   const handleSubmit = (e: React.FormEvent) => {
     const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-    if (formData.email.includes(" ") || !emailRegex.test(formData.email)) {
+    if (!formData.emailId || formData.emailId.includes(" ") || !emailRegex.test(fullEmail)) {
       e.preventDefault();
       alert("이메일 형식을 다시 확인해주세요!");
       return;
@@ -58,7 +64,9 @@ export default function ConsultationForm({ className }: { className?: string }) 
         company: '',
         name: '',
         phone: '',
-        email: '',
+        emailId: '',
+        emailDomain: '@naver.com',
+        customDomain: '',
         inquiry: '',
         agreed: false
       });
@@ -66,7 +74,7 @@ export default function ConsultationForm({ className }: { className?: string }) 
   };
 
   return (
-    <div className={cn("bg-white px-4 py-7 sm:p-8 rounded-2xl sm:rounded-3xl shadow-2xl border border-gray-100", className)}>
+    <div className={cn("bg-white px-3 py-7 sm:p-8 rounded-2xl sm:rounded-3xl shadow-2xl border border-gray-100", className)}>
       <div className="mb-6 text-center">
         <h3 className="text-clamp-h3 font-bold text-gray-900 mb-2">상담 접수</h3>
         <p className="text-gray-500 text-sm">내용을 남겨주시면 빠르게 연락드립니다.</p>
@@ -83,7 +91,7 @@ export default function ConsultationForm({ className }: { className?: string }) 
         <input type="hidden" name="entry.1197734588" value={formData.company} />
         <input type="hidden" name="entry.410116931" value={formData.name} />
         <input type="hidden" name="entry.220342773" value={formData.phone.replace(/-/g, "")} />
-        <input type="hidden" name="entry.1842282740" value={formData.email} />
+        <input type="hidden" name="entry.1842282740" value={fullEmail} />
         <input type="hidden" name="entry.1018759601" value={formData.inquiry} />
         <input type="hidden" name="entry.1745878659" value="동의합니다" />
 
@@ -94,7 +102,7 @@ export default function ConsultationForm({ className }: { className?: string }) 
               type="text"
               placeholder="회사명"
               required
-              className="w-full px-4 py-3 rounded-xl border border-gray-200 outline-none focus:ring-2 focus:ring-secondary/20 focus:border-secondary transition-all bg-gray-50/50"
+              className="w-full px-4 py-3 rounded-xl border border-gray-200 outline-none focus:ring-2 focus:ring-safety-orange/20 focus:border-safety-orange transition-all bg-gray-50/50"
               value={formData.company}
               onChange={(e) => setFormData({ ...formData, company: e.target.value })}
             />
@@ -107,7 +115,7 @@ export default function ConsultationForm({ className }: { className?: string }) 
                 type="text"
                 placeholder="이름"
                 required
-                className="w-full px-4 py-3 rounded-xl border border-gray-200 outline-none focus:ring-2 focus:ring-secondary/20 focus:border-secondary transition-all bg-gray-50/50"
+                className="w-full px-4 py-3 rounded-xl border border-gray-200 outline-none focus:ring-2 focus:ring-safety-orange/20 focus:border-safety-orange transition-all bg-gray-50/50"
                 value={formData.name}
                 onChange={(e) => setFormData({ ...formData, name: e.target.value })}
               />
@@ -119,7 +127,7 @@ export default function ConsultationForm({ className }: { className?: string }) 
                 placeholder="010-0000-0000"
                 maxLength={13}
                 required
-                className="w-full px-4 py-3 rounded-xl border border-gray-200 outline-none focus:ring-2 focus:ring-secondary/20 focus:border-secondary transition-all bg-gray-50/50"
+                className="w-full px-4 py-3 rounded-xl border border-gray-200 outline-none focus:ring-2 focus:ring-safety-orange/20 focus:border-safety-orange transition-all bg-gray-50/50"
                 value={formData.phone}
                 onChange={handlePhoneChange}
               />
@@ -127,15 +135,60 @@ export default function ConsultationForm({ className }: { className?: string }) 
           </div>
 
           <div>
-            <label className="block text-sm font-bold text-gray-700 mb-1.5">이메일</label>
-            <input
-              type="email"
-              placeholder="email@example.com"
-              required
-              className="w-full px-4 py-3 rounded-xl border border-gray-200 outline-none focus:ring-2 focus:ring-secondary/20 focus:border-secondary transition-all bg-gray-50/50"
-              value={formData.email}
-              onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-            />
+            <label className="block text-sm font-bold text-gray-700 mb-1.5">
+              이메일 주소 <span className="text-red-500">*</span>
+            </label>
+            <div className={cn(
+              "flex items-center gap-1 sm:gap-2 w-full",
+              formData.emailDomain === 'manual' && "flex-wrap gap-y-2"
+            )}>
+              <div className={cn(
+                "flex items-center gap-1 sm:gap-1.5",
+                formData.emailDomain === 'manual' ? "w-full sm:w-auto sm:flex-[1.2]" : "flex-[1.2] min-w-0"
+              )}>
+                <input
+                  type="text"
+                  placeholder="아이디 (영문)"
+                  required
+                  className="flex-1 min-w-0 px-2 sm:px-4 py-3 rounded-xl border border-gray-200 outline-none focus:ring-2 focus:ring-safety-orange/20 focus:border-safety-orange transition-all bg-gray-50/50 text-xs sm:text-base"
+                  value={formData.emailId}
+                  onChange={(e) => setFormData({ ...formData, emailId: e.target.value })}
+                />
+                <span className="text-gray-400 font-bold flex-shrink-0 text-[10px] sm:text-sm">@</span>
+              </div>
+              
+              <div className={cn(
+                "flex gap-1 sm:gap-2 min-w-0",
+                formData.emailDomain === 'manual' ? "w-full sm:w-auto sm:flex-[1.8]" : "flex-[1.8]"
+              )}>
+                {formData.emailDomain === 'manual' && (
+                  <input
+                    type="text"
+                    placeholder="직접 입력"
+                    required
+                    className="flex-1 min-w-0 px-2 sm:px-4 py-3 rounded-xl border border-gray-200 outline-none focus:ring-2 focus:ring-safety-orange/20 focus:border-safety-orange transition-all bg-gray-50/50 text-[10px] sm:text-sm"
+                    value={formData.customDomain}
+                    onChange={(e) => setFormData({ ...formData, customDomain: e.target.value })}
+                  />
+                )}
+                <select
+                  className={cn(
+                    "min-w-0 py-3 rounded-xl border border-gray-200 outline-none focus:ring-2 focus:ring-safety-orange/20 focus:border-safety-orange transition-all bg-gray-50/50 text-[10px] sm:text-sm cursor-pointer",
+                    formData.emailDomain === 'manual' ? "w-7 sm:w-10 px-0 flex-shrink-0 text-center" : "flex-1 px-1 sm:px-3"
+                  )}
+                  value={formData.emailDomain}
+                  onChange={(e) => setFormData({ ...formData, emailDomain: e.target.value, customDomain: '' })}
+                >
+                  <option value="@naver.com">naver.com</option>
+                  <option value="@gmail.com">gmail.com</option>
+                  <option value="@daum.net">daum.net</option>
+                  <option value="@hanmail.net">hanmail.net</option>
+                  <option value="@kakao.com">kakao.com</option>
+                  <option value="@nate.com">nate.com</option>
+                  <option value="manual">직접 입력</option>
+                </select>
+              </div>
+            </div>
           </div>
 
           <div>
@@ -144,7 +197,7 @@ export default function ConsultationForm({ className }: { className?: string }) 
               placeholder="문의내용을 적어주세요"
               rows={4}
               required
-              className="w-full px-4 py-3 rounded-xl border border-gray-200 outline-none focus:ring-2 focus:ring-secondary/20 focus:border-secondary transition-all bg-gray-50/50"
+              className="w-full px-4 py-3 rounded-xl border border-gray-200 outline-none focus:ring-2 focus:ring-safety-orange/20 focus:border-safety-orange transition-all bg-gray-50/50"
               value={formData.inquiry}
               onChange={(e) => setFormData({ ...formData, inquiry: e.target.value })}
             />

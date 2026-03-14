@@ -99,7 +99,7 @@ export default function Portfolio() {
 
         {/* Consultation Form Section */}
         <div id="consultation-form-section" className="max-w-4xl mx-auto pt-12">
-          <div className="bg-industrial-blue rounded-[2rem] sm:rounded-[3rem] px-4 py-10 sm:p-12 md:p-16 shadow-2xl relative overflow-hidden">
+          <div className="bg-industrial-blue rounded-[2rem] sm:rounded-[3rem] px-3 py-10 sm:p-12 md:p-16 shadow-2xl relative overflow-hidden">
             {/* Decorative Background Element */}
             <div className="absolute top-0 right-0 w-64 h-64 bg-primary/10 rounded-full -translate-y-1/2 translate-x-1/2 blur-3xl" />
             
