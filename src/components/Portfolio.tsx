@@ -81,14 +81,16 @@ export default function Portfolio() {
                   ))}
                 </div>
                 <h3 className="text-2xl font-bold mb-3 text-gray-900">{item.title}</h3>
-                <p className="text-gray-600 mb-6 leading-relaxed flex-grow">{item.description}</p>
+                <p className="text-gray-600 mb-8 leading-relaxed flex-grow">{item.description}</p>
+                
                 <a
                   href={item.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-primary font-bold flex items-center gap-2 hover:gap-3 transition-all"
+                  className="w-full bg-white border-2 border-safety-orange text-industrial-blue hover:bg-safety-orange hover:text-white font-bold py-4 rounded-xl flex items-center justify-center gap-2 transition-all duration-200 group/btn shadow-sm hover:shadow-md"
                 >
-                  자세히 보기 <ExternalLink className="w-4 h-4" />
+                  <span>샘플 사이트 보기</span>
+                  <ExternalLink className="w-4 h-4 group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform" />
                 </a>
               </div>
             </motion.div>
