@@ -23,8 +23,8 @@ export default function SuccessStories() {
       <div className="container mx-auto px-6">
         <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
           <div className="text-center md:text-left">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 text-gray-900">성공적인 매매 사례</h2>
-            <p className="text-gray-600 text-lg">이미 수많은 기업들이 오픈도어와 함께 성장하고 있습니다.</p>
+            <h2 className="text-clamp-h2 font-bold mb-6 text-gray-900">성공적인 매매 사례</h2>
+            <p className="text-clamp-p text-gray-600">이미 수많은 기업들이 오픈도어와 함께 성장하고 있습니다.</p>
           </div>
           <button className="text-primary font-bold hover:text-primary/80 transition-colors flex items-center gap-2 text-lg">
             전체 사례 보기 <ArrowRight className="w-5 h-5" />

@@ -20,8 +20,8 @@ export default function ValueProp() {
   return (
     <section className="py-24 bg-gray-50/50">
       <div className="container mx-auto px-6 text-center mb-16">
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 text-gray-900">왜 오픈도어인가요?</h2>
-        <p className="text-gray-600 max-w-2xl mx-auto text-lg leading-relaxed">
+        <h2 className="text-clamp-h2 font-bold mb-6 text-gray-900">왜 오픈도어인가요?</h2>
+        <p className="text-clamp-p text-gray-600 max-w-2xl mx-auto leading-relaxed">
           기존의 번거로운 기계 매매 방식을 혁신했습니다.<br className="hidden sm:block" />
           “장비는 등록하고, 고객은 연결됩니다.”
         </p>

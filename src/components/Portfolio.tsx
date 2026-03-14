@@ -9,21 +9,21 @@ export default function Portfolio() {
       title: "원공사 (Wongongsa 2)",
       description: "레이저 기계·장비 제조 전문 기업의 고성능 랜딩페이지입니다. 더욱 세련된 디자인과 최적화된 상담 시스템을 제공합니다.",
       url: "https://wongongsa2.vercel.app/",
-      image: "https://images.unsplash.com/photo-1565891741441-64926e441838?auto=format&fit=crop&q=80&w=800",
+      image: "https://res.cloudinary.com/dqhj5ucak/image/upload/v1773485178/01_zhmute.jpg",
       tags: ["레이저 기계·장비", "제조 전문", "고성능"]
     },
     {
       title: "원공사 (Wongongsa)",
       description: "정밀한 기술의 완성. 레이저 절단기, 커팅기, 용접기 전문 제조 기업의 고성능 랜딩페이지입니다.",
       url: "https://wongongsa.vercel.app/",
-      image: "https://images.unsplash.com/photo-1537462715879-360eeb61a0ad?auto=format&fit=crop&q=80&w=800",
+      image: "https://res.cloudinary.com/dqhj5ucak/image/upload/v1773485178/02_fpppxi.jpg",
       tags: ["레이저 기계·장비", "정밀제조", "공식대리점"]
     },
     {
       title: "대화상사 (Daehwa SS)",
       description: "30년 전통의 중고 기계 매매 전문. 새 기계 같은 성능과 합리적인 가격을 보증하는 신뢰의 플랫폼입니다.",
       url: "https://daehwass.vercel.app/",
-      image: "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&q=80&w=800",
+      image: "https://res.cloudinary.com/dqhj5ucak/image/upload/v1773485178/03_bheu1i.jpg",
       tags: ["중고기계", "유통매매", "30년전통"]
     }
   ];
@@ -36,8 +36,8 @@ export default function Portfolio() {
             <Layout className="w-4 h-4" />
             <span>제작 포트폴리오</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 text-gray-900">랜딩페이지 제작 사례</h2>
-          <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+          <h2 className="text-clamp-h2 font-bold mb-6 text-gray-900">랜딩페이지 제작 사례</h2>
+          <p className="text-clamp-p text-gray-600 max-w-2xl mx-auto">
             오픈도어가 제작한 기업 전용 랜딩페이지 샘플입니다.<br className="hidden sm:block" />
             각 기업의 특성에 맞춘 최적화된 디자인과 상담 연결 시스템을 확인해보세요.
           </p>

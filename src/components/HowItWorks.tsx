@@ -61,8 +61,8 @@ export default function HowItWorks() {
     <section className="py-24 bg-gray-50/50">
       <div className="container mx-auto px-6">
         <div className="text-center mb-20">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 text-gray-900">간편한 3단계 진행 절차</h2>
-          <p className="text-gray-600 text-lg">복잡한 과정은 오픈도어가 대신합니다. 대표님은 결정만 하세요.</p>
+          <h2 className="text-clamp-h2 font-bold mb-6 text-gray-900">간편한 3단계 진행 절차</h2>
+          <p className="text-clamp-p text-gray-600">복잡한 과정은 오픈도어가 대신합니다. 대표님은 결정만 하세요.</p>
         </div>
 
         <div className="grid lg:grid-cols-3 gap-8 lg:gap-10">

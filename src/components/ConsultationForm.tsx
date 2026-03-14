@@ -68,7 +68,7 @@ export default function ConsultationForm({ className }: { className?: string }) 
   return (
     <div className={cn("bg-white px-4 py-7 sm:p-8 rounded-2xl sm:rounded-3xl shadow-2xl border border-gray-100", className)}>
       <div className="mb-6 text-center">
-        <h3 className="text-2xl font-bold text-gray-900 mb-2">상담 접수</h3>
+        <h3 className="text-clamp-h3 font-bold text-gray-900 mb-2">상담 접수</h3>
         <p className="text-gray-500 text-sm">내용을 남겨주시면 빠르게 연락드립니다.</p>
       </div>
 
