@@ -37,7 +37,7 @@ export default function Hero() {
                 <span className="inline-block whitespace-nowrap">중고기계매매 전문 플랫폼</span><br />
                 <span className="text-safety-orange">전자동 | 오픈도어</span>
               </h1>
-              <p className="text-clamp-p text-white/90 mb-12 max-w-2xl leading-relaxed font-medium">
+              <p className="text-clamp-p text-white/90 mb-8 sm:mb-12 max-w-2xl leading-relaxed font-medium">
                 제조사·유통사·장비 보유 기업을 위한 산업장비 플랫폼<br />
                 보유한 기계·장비를 효과적으로 홍보하고<br />
                 구매 관심 고객과 전화·문의로 직접 연결됩니다.

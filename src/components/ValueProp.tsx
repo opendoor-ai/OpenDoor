@@ -44,7 +44,7 @@ export default function ValueProp() {
             {traditional.map((item, i) => (
               <li key={i} className="flex items-start gap-4 text-gray-500">
                 <div className="w-1.5 h-1.5 rounded-full bg-gray-300 mt-2.5 shrink-0" />
-                <span className="text-lg">{item}</span>
+                <span className="text-base sm:text-lg">{item}</span>
               </li>
             ))}
           </ul>
@@ -68,7 +68,7 @@ export default function ValueProp() {
             {opendoor.map((item, i) => (
               <li key={i} className="flex items-start gap-4 text-white/90">
                 <div className="w-1.5 h-1.5 rounded-full bg-safety-orange mt-2.5 shrink-0" />
-                <span className="text-lg font-semibold">{item}</span>
+                <span className="text-base sm:text-lg font-semibold">{item}</span>
               </li>
             ))}
           </ul>

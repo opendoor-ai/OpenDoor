@@ -16,7 +16,7 @@ export default function BrandMission() {
               OUR MISSION
             </span>
             
-            <h2 className="text-clamp-h2 font-bold text-gray-900 leading-[1.6] mb-10 tracking-tight">
+            <h2 className="text-clamp-h2 font-bold text-gray-900 leading-[1.4] sm:leading-[1.6] mb-10 tracking-tight">
               오픈도어는 단순한 “광고 플랫폼”이 아닌 <br />
               실제 거래가 시작되는 입구(Open Door) <br className="lg:hidden" />
               가 되는 것을 목표로 합니다.

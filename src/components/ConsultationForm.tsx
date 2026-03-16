@@ -16,6 +16,7 @@ export default function ConsultationForm({ className }: { className?: string }) 
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [showPrivacy, setShowPrivacy] = useState(false);
+  const [isSuccess, setIsSuccess] = useState(false);
   const isSubmittingRef = useRef(false);
   const iframeRef = useRef<HTMLIFrameElement>(null);
 
@@ -34,7 +35,7 @@ export default function ConsultationForm({ className }: { className?: string }) 
 
   const handleSubmit = (e: React.FormEvent) => {
     const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-    if (!formData.emailId || formData.emailId.includes(" ") || !emailRegex.test(fullEmail)) {
+    if (!formData.email || formData.email.includes(" ") || !emailRegex.test(fullEmail)) {
       e.preventDefault();
       alert("이메일 형식을 다시 확인해주세요!");
       return;
@@ -42,6 +43,13 @@ export default function ConsultationForm({ className }: { className?: string }) 
     
     setIsSubmitting(true);
     isSubmittingRef.current = true;
+
+    // Trigger emails via backend API
+    fetch('/api/send-emails', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(formData),
+    }).catch(err => console.error("Email trigger failed:", err));
 
     // Fallback: If iframe onLoad doesn't fire for some reason, reset 후 알림
     setTimeout(() => {
@@ -53,7 +61,7 @@ export default function ConsultationForm({ className }: { className?: string }) 
 
   const handleIframeLoad = () => {
     if (isSubmittingRef.current) {
-      alert("상담 접수가 성공적으로 완료되었습니다!");
+      setIsSuccess(true);
       setIsSubmitting(false);
       isSubmittingRef.current = false;
       setFormData({
@@ -68,7 +76,25 @@ export default function ConsultationForm({ className }: { className?: string }) 
   };
 
   return (
-    <div className={cn("bg-white px-3 py-7 sm:p-8 rounded-2xl sm:rounded-3xl shadow-2xl border border-gray-100", className)}>
+    <div className={cn("bg-white px-3 py-7 sm:p-8 rounded-2xl sm:rounded-3xl shadow-2xl border border-gray-100 relative overflow-hidden", className)}>
+      {isSuccess && (
+        <div className="absolute inset-0 z-[150] bg-white flex flex-col items-center justify-center p-6 text-center animate-in fade-in duration-500">
+          <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mb-6">
+            <ShieldCheck className="w-10 h-10 text-green-600" />
+          </div>
+          <h3 className="text-2xl font-bold text-gray-900 mb-2">상담 접수 완료</h3>
+          <p className="text-gray-600 mb-8">
+            상담 신청이 정상적으로 접수되었습니다.<br />
+            담당자가 확인 후 빠르게 연락드리겠습니다.
+          </p>
+          <button
+            onClick={() => setIsSuccess(false)}
+            className="px-8 py-3 bg-gray-900 text-white font-bold rounded-xl hover:bg-gray-800 transition-colors"
+          >
+            확인
+          </button>
+        </div>
+      )}
       <div className="mb-6 text-center">
         <h3 className="text-clamp-h3 font-bold text-gray-900 mb-2">상담 접수</h3>
         <p className="text-gray-500 text-sm">내용을 남겨주시면 빠르게 연락드립니다.</p>
@@ -84,7 +110,7 @@ export default function ConsultationForm({ className }: { className?: string }) 
         {/* Google Form Hidden Fields */}
         <input type="hidden" name="entry.1197734588" value={formData.company} />
         <input type="hidden" name="entry.410116931" value={formData.name} />
-        <input type="hidden" name="entry.220342773" value={formData.phone.replace(/-/g, "")} />
+        <input type="hidden" name="entry.220342773" value={formData.phone} />
         <input type="hidden" name="entry.1842282740" value={fullEmail} />
         <input type="hidden" name="entry.1018759601" value={formData.inquiry} />
         <input type="hidden" name="entry.1745878659" value="동의합니다" />
@@ -195,6 +221,14 @@ export default function ConsultationForm({ className }: { className?: string }) 
         </div>
       </form>
 
+      <iframe
+        name={iframeName}
+        id={iframeName}
+        style={{ display: 'none' }}
+        ref={iframeRef}
+        onLoad={handleIframeLoad}
+      />
+
       {/* Privacy Policy Modal */}
       {showPrivacy && (
         <div className="fixed inset-0 z-[200] flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm">
@@ -253,13 +287,6 @@ export default function ConsultationForm({ className }: { className?: string }) 
         </div>
       )}
 
-      <iframe
-        name={iframeName}
-        id={iframeName}
-        style={{ display: 'none' }}
-        ref={iframeRef}
-        onLoad={handleIframeLoad}
-      />
     </div>
   );
 }
