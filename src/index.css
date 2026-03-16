@@ -8,6 +8,11 @@
   --color-industrial-blue: #002349;
   --color-safety-orange: #F59E0B;
   --color-bg-gray: #f8f9fa;
+
+  /* Custom Breakpoints */
+  --breakpoint-sm: 768px;
+  --breakpoint-md: 1024px;
+  --breakpoint-lg: 1280px;
 }
 
 @keyframes bounce-subtle {
@@ -29,19 +34,19 @@
 }
 
 @utility text-clamp-h1 {
-  font-size: clamp(24px, 6vw, 72px);
+  font-size: clamp(26px, 8vw, 72px);
 }
 
 @utility text-clamp-h2 {
-  font-size: clamp(20px, 5vw, 48px);
+  font-size: clamp(22px, 6vw, 48px);
 }
 
 @utility text-clamp-h3 {
-  font-size: clamp(18px, 4vw, 32px);
+  font-size: clamp(20px, 5vw, 32px);
 }
 
 @utility text-clamp-p {
-  font-size: clamp(14px, 3.5vw, 18px);
+  font-size: clamp(15px, 4vw, 18px);
 }
 
 @font-face {

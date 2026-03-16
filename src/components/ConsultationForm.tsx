@@ -10,9 +10,7 @@ export default function ConsultationForm({ className }: { className?: string }) 
     company: '',
     name: '',
     phone: '',
-    emailId: '',
-    emailDomain: '@naver.com',
-    customDomain: '',
+    email: '',
     inquiry: '',
     agreed: false
   });
@@ -21,9 +19,7 @@ export default function ConsultationForm({ className }: { className?: string }) 
   const isSubmittingRef = useRef(false);
   const iframeRef = useRef<HTMLIFrameElement>(null);
 
-  const fullEmail = formData.emailDomain === 'manual' 
-    ? `${formData.emailId}${formData.customDomain ? (formData.customDomain.startsWith('@') ? formData.customDomain : '@' + formData.customDomain) : ''}`
-    : `${formData.emailId}${formData.emailDomain}`;
+  const fullEmail = formData.email;
 
   const handlePhoneChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     let val = e.target.value.replace(/[^0-9]/g, "");
@@ -64,9 +60,7 @@ export default function ConsultationForm({ className }: { className?: string }) 
         company: '',
         name: '',
         phone: '',
-        emailId: '',
-        emailDomain: '@naver.com',
-        customDomain: '',
+        email: '',
         inquiry: '',
         agreed: false
       });
@@ -138,57 +132,14 @@ export default function ConsultationForm({ className }: { className?: string }) 
             <label className="block text-sm font-bold text-gray-700 mb-1.5">
               이메일 주소 <span className="text-red-500">*</span>
             </label>
-            <div className={cn(
-              "flex items-center gap-1 sm:gap-2 w-full",
-              formData.emailDomain === 'manual' && "flex-wrap gap-y-2"
-            )}>
-              <div className={cn(
-                "flex items-center gap-1 sm:gap-1.5",
-                formData.emailDomain === 'manual' ? "w-full sm:w-auto sm:flex-[1.2]" : "flex-[1.2] min-w-0"
-              )}>
-                <input
-                  type="text"
-                  placeholder="아이디 (영문)"
-                  required
-                  className="flex-1 min-w-0 px-2 sm:px-4 py-3 rounded-xl border border-gray-200 outline-none focus:ring-2 focus:ring-safety-orange/20 focus:border-safety-orange transition-all bg-gray-50/50 text-xs sm:text-base"
-                  value={formData.emailId}
-                  onChange={(e) => setFormData({ ...formData, emailId: e.target.value })}
-                />
-                <span className="text-gray-400 font-bold flex-shrink-0 text-[10px] sm:text-sm">@</span>
-              </div>
-              
-              <div className={cn(
-                "flex gap-1 sm:gap-2 min-w-0",
-                formData.emailDomain === 'manual' ? "w-full sm:w-auto sm:flex-[1.8]" : "flex-[1.8]"
-              )}>
-                {formData.emailDomain === 'manual' && (
-                  <input
-                    type="text"
-                    placeholder="직접 입력"
-                    required
-                    className="flex-1 min-w-0 px-2 sm:px-4 py-3 rounded-xl border border-gray-200 outline-none focus:ring-2 focus:ring-safety-orange/20 focus:border-safety-orange transition-all bg-gray-50/50 text-[10px] sm:text-sm"
-                    value={formData.customDomain}
-                    onChange={(e) => setFormData({ ...formData, customDomain: e.target.value })}
-                  />
-                )}
-                <select
-                  className={cn(
-                    "min-w-0 py-3 rounded-xl border border-gray-200 outline-none focus:ring-2 focus:ring-safety-orange/20 focus:border-safety-orange transition-all bg-gray-50/50 text-[10px] sm:text-sm cursor-pointer",
-                    formData.emailDomain === 'manual' ? "w-7 sm:w-10 px-0 flex-shrink-0 text-center" : "flex-1 px-1 sm:px-3"
-                  )}
-                  value={formData.emailDomain}
-                  onChange={(e) => setFormData({ ...formData, emailDomain: e.target.value, customDomain: '' })}
-                >
-                  <option value="@naver.com">naver.com</option>
-                  <option value="@gmail.com">gmail.com</option>
-                  <option value="@daum.net">daum.net</option>
-                  <option value="@hanmail.net">hanmail.net</option>
-                  <option value="@kakao.com">kakao.com</option>
-                  <option value="@nate.com">nate.com</option>
-                  <option value="manual">직접 입력</option>
-                </select>
-              </div>
-            </div>
+            <input
+              type="email"
+              placeholder="example@email.com"
+              required
+              className="w-full px-4 py-3 rounded-xl border border-gray-200 outline-none focus:ring-2 focus:ring-safety-orange/20 focus:border-safety-orange transition-all bg-gray-50/50 text-sm sm:text-base"
+              value={formData.email}
+              onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+            />
           </div>
 
           <div>

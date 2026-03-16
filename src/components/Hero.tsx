@@ -33,11 +33,11 @@ export default function Hero() {
               transition={{ duration: 0.8 }}
               className="text-left order-1"
             >
-              <h1 className="text-[30px] sm:text-clamp-h1 font-bold text-white leading-[1.2] sm:leading-[1.1] mb-8 tracking-tight">
-                <span className="inline-block">중고기계매매 전문 플랫폼</span><br />
+              <h1 className="text-clamp-h1 font-bold text-white leading-[1.2] sm:leading-[1.1] mb-8 tracking-tight">
+                <span className="inline-block whitespace-nowrap">중고기계매매 전문 플랫폼</span><br />
                 <span className="text-safety-orange">전자동 | 오픈도어</span>
               </h1>
-              <p className="text-[17px] sm:text-clamp-p text-white/90 mb-12 max-w-2xl leading-relaxed font-medium">
+              <p className="text-clamp-p text-white/90 mb-12 max-w-2xl leading-relaxed font-medium">
                 제조사·유통사·장비 보유 기업을 위한 산업장비 플랫폼<br />
                 보유한 기계·장비를 효과적으로 홍보하고<br />
                 구매 관심 고객과 전화·문의로 직접 연결됩니다.
