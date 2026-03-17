@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { DoorOpen, Mail, Phone, MapPin, Monitor, Smartphone } from 'lucide-react';
+import { DoorOpen, Mail, Phone, MapPin, Monitor, Smartphone, MessageCircle } from 'lucide-react';
 import { useViewMode } from '../context/ViewModeContext';
 
 export default function Footer() {
@@ -48,6 +48,12 @@ export default function Footer() {
               <li className="flex items-center gap-2">
                 <MapPin className="w-4 h-4" />
                 <span>서울특별시 강서구 화곡로66길 192, 1층(등촌동)</span>
+              </li>
+              <li className="flex items-center gap-2">
+                <MessageCircle className="w-4 h-4 text-[#FEE500]" />
+                <a href="http://pf.kakao.com/_rtxmxhX" target="_blank" rel="noopener noreferrer" className="hover:text-white">
+                  카카오톡 채널: 오픈도어 (ID: 오픈도어365)
+                </a>
               </li>
             </ul>
           </div>

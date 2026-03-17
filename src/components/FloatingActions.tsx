@@ -51,7 +51,7 @@ export default function FloatingActions() {
       </a>
 
       <a
-        href="https://pf.kakao.com/_xfvyxmn/chat"
+        href="http://pf.kakao.com/_rtxmxhX/chat"
         target="_blank"
         rel="noopener noreferrer"
         className="w-11 h-11 lg:w-12 lg:h-12 bg-[#FEE500] rounded-full shadow-lg flex items-center justify-center text-[#3c1e1e] hover:brightness-95 transition-all"
