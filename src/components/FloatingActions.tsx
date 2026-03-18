@@ -6,7 +6,7 @@ export default function FloatingActions() {
   const [isVisible, setIsVisible] = useState(false);
   const [isSmsModalOpen, setIsSmsModalOpen] = useState(false);
   const [smsMessage, setSmsMessage] = useState(
-    "오픈도어 홈페이지를 보고 전화문의 드립니다.\n빠른 상담 부탁드립니다."
+    "오픈도어 홈페이지를 보고 전화문의 드립니다.\n\n빠른 상담 부탁드립니다.\n\nhttps://jeonjadong.com"
   );
 
   useEffect(() => {
