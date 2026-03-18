@@ -132,10 +132,27 @@ export default function FloatingActions() {
                 </a>
 
                 {/* Text */}
-                <h3 className="text-2xl sm:text-3xl font-black text-gray-900 mb-2 tracking-tight">오픈도어</h3>
-                <p className="text-sm sm:text-base text-gray-500 font-medium mb-6 sm:mb-8">
+                <h3 className="text-2xl sm:text-3xl font-black text-gray-900 mb-1 tracking-tight">오픈도어</h3>
+                <p className="text-sm sm:text-base text-gray-500 font-medium mb-6">
                   "가장 빠른 사람이 가장 먼저 소유합니다."
                 </p>
+
+                {/* Link Preview Card */}
+                <div className="w-full mb-6 bg-gray-50 rounded-2xl overflow-hidden border border-gray-100 text-left shadow-sm">
+                  <div className="aspect-[2/1] w-full overflow-hidden">
+                    <img 
+                      src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=800" 
+                      alt="오픈도어 프리미엄"
+                      className="w-full h-full object-cover"
+                      referrerPolicy="no-referrer"
+                    />
+                  </div>
+                  <div className="p-3 sm:p-4">
+                    <div className="text-xs font-bold text-primary mb-1 uppercase tracking-wider">Official Website</div>
+                    <div className="text-sm sm:text-base font-bold text-gray-900 truncate">오픈도어 | 프리미엄 비즈니스 플랫폼</div>
+                    <div className="text-xs text-gray-400 truncate">https://jeonjadong.com</div>
+                  </div>
+                </div>
 
                 {/* Textarea */}
                 <div className="w-full mb-6 sm:mb-8">
