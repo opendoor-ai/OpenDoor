@@ -40,6 +40,7 @@ export default function FloatingActions() {
     const phoneNumber = "01063558055";
     const encodedBody = encodeURIComponent(smsMessage);
     window.location.href = `sms:${phoneNumber}?body=${encodedBody}`;
+    setIsSmsModalOpen(false);
   };
 
   return (
