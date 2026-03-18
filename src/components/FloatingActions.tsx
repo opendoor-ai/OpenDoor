@@ -141,7 +141,7 @@ export default function FloatingActions() {
                 <div className="w-full mb-6 bg-gray-50 rounded-2xl overflow-hidden border border-gray-100 text-left shadow-sm">
                   <div className="aspect-[2/1] w-full overflow-hidden">
                     <img 
-                      src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=800" 
+                      src="https://res.cloudinary.com/dqhj5ucak/image/upload/v1773815039/nano-banana-result_4_f4jqwf.png" 
                       alt="오픈도어 프리미엄"
                       className="w-full h-full object-cover"
                       referrerPolicy="no-referrer"
