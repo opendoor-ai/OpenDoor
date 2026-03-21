@@ -38,7 +38,7 @@ export default function Portfolio() {
           </div>
           <h2 className="text-clamp-h2 font-bold mb-6 text-gray-900">랜딩페이지 제작 사례</h2>
           <p className="text-clamp-p text-gray-600 max-w-2xl mx-auto">
-            오픈도어가 제작한 기업 전용 랜딩페이지 샘플입니다.<br className="hidden sm:block" />
+            오픈도어기계광고가 제작한 기업 전용 랜딩페이지 샘플입니다.<br className="hidden sm:block" />
             각 기업의 특성에 맞춘 최적화된 디자인과 상담 연결 시스템을 확인해보세요.
           </p>
         </div>

@@ -20,7 +20,7 @@ export default function ProcessPage() {
     {
       icon: <UserCheck className="w-10 h-10" />,
       title: "3. 타겟 노출 및 고객 유입",
-      content: "오픈도어의 타겟 마케팅 시스템을 통해 실제 기계·장비 구매 의사가 있는 잠재 고객들에게 자사 기계·장비를 효과적으로 노출합니다."
+      content: "오픈도어기계광고의 타겟 마케팅 시스템을 통해 실제 기계·장비 구매 의사가 있는 잠재 고객들에게 자사 기계·장비를 효과적으로 노출합니다."
     },
     {
       icon: <CreditCard className="w-10 h-10" />,
@@ -38,8 +38,8 @@ export default function ProcessPage() {
           <div className="max-w-3xl mx-auto text-center mb-20">
             <h1 className="text-4xl font-bold mb-6">홍보 및 상담 연결 프로세스</h1>
             <p className="text-gray-600 text-lg">
-              오픈도어는 기업의 기계·장비가 가장 돋보일 수 있는 환경을 제공하고, 
-              잠재 고객과의 직접적인 연결을 최우선으로 합니다.
+              오픈도어기계광고는 검색, 블로그, 랜딩페이지를 통해 <br />
+              전화 문의를 연결하는 광고 시스템입니다.
             </p>
           </div>
 
@@ -65,7 +65,7 @@ export default function ProcessPage() {
 
           {/* Closing Banner */}
           <div className="mt-24 text-center py-20 bg-primary rounded-[3rem] text-gray-900">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">오픈도어(OpenDoor)</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">오픈도어기계광고(OpenDoor)</h2>
             <p className="text-xl md:text-2xl opacity-90 mb-8">
               산업용 기계 거래의 시작을 여는<br />
               실무 중심 B2B 플랫폼입니다.

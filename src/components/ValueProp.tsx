@@ -20,10 +20,10 @@ export default function ValueProp() {
   return (
     <section className="py-24 bg-gray-50/50">
       <div className="container mx-auto px-6 text-center mb-16">
-        <h2 className="text-clamp-h2 font-bold mb-6 text-gray-900">왜 오픈도어인가요?</h2>
+        <h2 className="text-clamp-h2 font-bold mb-6 text-gray-900">왜 오픈도어기계광고인가요?</h2>
         <p className="text-clamp-p text-gray-600 max-w-2xl mx-auto leading-relaxed">
-          기존의 번거로운 기계 매매 방식을 혁신했습니다.<br className="hidden sm:block" />
-          “장비는 등록하고, 고객은 연결됩니다.”
+          오픈도어기계광고는 단순 광고와 달리 <br className="hidden sm:block" />
+          실제 기계 판매까지 연결되는 광고 서비스입니다.
         </p>
       </div>
 
@@ -62,7 +62,7 @@ export default function ValueProp() {
             <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center">
               <CheckCircle2 className="w-6 h-6 text-safety-orange" />
             </div>
-            <h3 className="text-2xl font-bold text-white">오픈도어 솔루션</h3>
+            <h3 className="text-2xl font-bold text-white">오픈도어기계광고 솔루션</h3>
           </div>
           <ul className="space-y-6 relative z-10">
             {opendoor.map((item, i) => (

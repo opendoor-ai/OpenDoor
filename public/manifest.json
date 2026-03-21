@@ -1,6 +1,6 @@
 {
-  "short_name": "오픈도어",
-  "name": "오픈도어 - 중고기계 전문 플랫폼",
+  "short_name": "오픈도어기계광고",
+  "name": "오픈도어기계광고 - 중고기계 전문 플랫폼",
   "icons": [
     {
       "src": "/favicon.svg",
@@ -26,5 +26,5 @@
   "display": "standalone",
   "scope": "/",
   "theme_color": "#F59E0B",
-  "description": "산업용 중고기계 매매 전문 플랫폼 전자동 오픈도어"
+  "description": "오픈도어기계광고는 중고기계를 판매하기 위해 전화 문의를 발생시키는 광고 서비스입니다."
 }

@@ -22,12 +22,12 @@ export default function FeaturesPage() {
     {
       icon: <ShieldAlert className="w-5 h-5 text-amber-500" />,
       title: "소유권 및 운영 방식",
-      content: "본 서비스는 랜딩페이지를 구매하거나 소유하는 방식이 아닙니다. 오픈도어는 개별 랜딩페이지의 판매, 제작대행, 소유권 이전을 제공하지 않습니다."
+      content: "본 서비스는 랜딩페이지를 구매하거나 소유하는 방식이 아닙니다. 오픈도어기계광고는 개별 랜딩페이지의 판매, 제작대행, 소유권 이전을 제공하지 않습니다."
     },
     {
       icon: <Globe2 className="w-5 h-5 text-blue-500" />,
       title: "플랫폼 입점 구조",
-      content: "공급사는 오픈도어 플랫폼에 입점함으로써 시스템 내에서 전용 상담 연결 페이지가 운영됩니다. 해당 페이지는 구매·양도 가능한 자산이 아니며, 플랫폼 정책에 따라 관리됩니다."
+      content: "공급사는 오픈도어기계광고 플랫폼에 입점함으로써 시스템 내에서 전용 상담 연결 페이지가 운영됩니다. 해당 페이지는 구매·양도 가능한 자산이 아니며, 플랫폼 정책에 따라 관리됩니다."
     },
     {
       icon: <Settings className="w-5 h-5 text-gray-500" />,
@@ -42,7 +42,7 @@ export default function FeaturesPage() {
     {
       icon: <LinkIcon className="w-5 h-5 text-indigo-500" />,
       title: "운영 환경 및 응대",
-      content: "모든 랜딩페이지는 오픈도어 내에서만 운영되며 외부 도메인 연결은 제공하지 않습니다. 상담 응대 및 계약 체결은 공급사가 직접 수행합니다."
+      content: "모든 랜딩페이지는 오픈도어기계광고 내에서만 운영되며 외부 도메인 연결은 제공하지 않습니다. 상담 응대 및 계약 체결은 공급사가 직접 수행합니다."
     }
   ];
 
@@ -54,9 +54,9 @@ export default function FeaturesPage() {
         <div className="container mx-auto px-6">
           <div className="text-center mb-20">
             <h1 className="text-3xl md:text-4xl font-bold mb-6 leading-tight">
-              오픈도어는 <br className="hidden md:block" />
-              산업용 기계 신품·중고를 취급하는 기업을 위한 <br />
-              <span className="text-primary">홍보 · 노출 · 상담 연결</span>에 특화된 플랫폼입니다.
+              오픈도어기계광고는 <br className="hidden md:block" />
+              문의가 없는 기계 매물을 <br />
+              전화가 오는 상태로 바꾸는 광고 방법입니다.
             </h1>
           </div>
 
@@ -99,15 +99,15 @@ export default function FeaturesPage() {
 
             <div className="mt-12 pt-8 border-t border-gray-200">
               <p className="text-gray-500 text-sm leading-relaxed text-center italic">
-                오픈도어는 산업용 기계 공급사를 위한 상담 연결 플랫폼으로, <br className="hidden md:block" />
-                기계 중심의 구조를 통해 구매자와 공급사를 직접 연결합니다.
+                오픈도어기계광고는 중고기계를 판매하기 위해 <br className="hidden md:block" />
+                전화 문의를 발생시키는 광고 서비스입니다.
               </p>
             </div>
           </div>
 
           {/* Closing Banner */}
           <div className="mt-24 text-center py-20 bg-primary rounded-[3rem] text-gray-900">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">오픈도어(OpenDoor)</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">오픈도어기계광고(OpenDoor)</h2>
             <p className="text-xl md:text-2xl opacity-90 mb-8">
               산업용 기계 거래의 시작을 여는<br />
               실무 중심 B2B 플랫폼입니다.

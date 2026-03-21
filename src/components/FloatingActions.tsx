@@ -6,7 +6,7 @@ export default function FloatingActions() {
   const [isVisible, setIsVisible] = useState(false);
   const [isSmsModalOpen, setIsSmsModalOpen] = useState(false);
   const [smsMessage, setSmsMessage] = useState(
-    "오픈도어 홈페이지를 보고 전화문의 드립니다.\n\n빠른 상담 부탁드립니다.\n\nhttps://jeonjadong.com"
+    "오픈도어기계광고 홈페이지를 보고 전화문의 드립니다.\n\n빠른 상담 부탁드립니다.\n\nhttps://jeonjadong.com"
   );
 
   useEffect(() => {
@@ -133,9 +133,10 @@ export default function FloatingActions() {
                 </a>
 
                 {/* Text */}
-                <h3 className="text-2xl sm:text-3xl font-black text-gray-900 mb-1 tracking-tight">오픈도어</h3>
+                <h3 className="text-2xl sm:text-3xl font-black text-gray-900 mb-1 tracking-tight">오픈도어기계광고</h3>
                 <p className="text-sm sm:text-base text-gray-500 font-medium mb-6">
-                  "가장 빠른 사람이 가장 먼저 소유합니다."
+                  오픈도어기계광고는 중고기계를 판매하기 위해<br />
+                  전화 문의를 발생시키는 광고 서비스입니다.
                 </p>
 
                 {/* Link Preview Card */}
@@ -143,14 +144,14 @@ export default function FloatingActions() {
                   <div className="aspect-[2/1] w-full overflow-hidden">
                     <img 
                       src="https://res.cloudinary.com/dqhj5ucak/image/upload/v1773815039/nano-banana-result_4_f4jqwf.png" 
-                      alt="오픈도어 프리미엄"
+                      alt="오픈도어기계광고 프리미엄"
                       className="w-full h-full object-cover"
                       referrerPolicy="no-referrer"
                     />
                   </div>
                   <div className="p-3 sm:p-4">
                     <div className="text-xs font-bold text-primary mb-1 uppercase tracking-wider">Official Website</div>
-                    <div className="text-sm sm:text-base font-bold text-gray-900 truncate">오픈도어 | 프리미엄 비즈니스 플랫폼</div>
+                    <div className="text-sm sm:text-base font-bold text-gray-900 truncate">오픈도어기계광고 | 프리미엄 비즈니스 플랫폼</div>
                     <div className="text-xs text-gray-400 truncate">https://jeonjadong.com</div>
                   </div>
                 </div>

@@ -241,7 +241,7 @@ export default function ConsultationForm({ className }: { className?: string }) 
               >&times;</button>
             </div>
             <div className="p-6 max-h-[60vh] overflow-y-auto text-sm text-gray-600 leading-relaxed space-y-4">
-              <p>오픈도어는 원활한 상담 및 서비스 제공을 위해 아래와 같이 개인정보를 수집하고 있습니다.</p>
+              <p>오픈도어기계광고는 원활한 상담 및 서비스 제공을 위해 아래와 같이 개인정보를 수집하고 있습니다.</p>
               
               <div className="space-y-2">
                 <p className="font-bold text-gray-800">1. 수집하는 개인정보 항목</p>

@@ -16,11 +16,11 @@ export default function Footer() {
               <div className="w-8 h-8 bg-white rounded flex items-center justify-center">
                 <DoorOpen className="text-primary w-5 h-5" />
               </div>
-              <span className="text-xl font-bold tracking-tighter">오픈도어</span>
+              <span className="text-xl font-bold tracking-tighter">오픈도어기계광고</span>
             </Link>
             <p className="text-white/60 text-sm leading-relaxed">
-              산업용 기계 신품·중고 기업 홍보 및 상담 연결 플랫폼.<br />
-              전용 랜딩페이지를 통해 고객과 기업을 직접 연결합니다.
+              오픈도어기계광고는 중고기계를 빠르게 판매하기 위해<br />
+              전화 문의를 발생시키는 기계 판매 중심 광고 서비스입니다.
             </p>
           </div>
 
@@ -52,7 +52,7 @@ export default function Footer() {
               <li className="flex items-center gap-2">
                 <MessageCircle className="w-4 h-4 text-[#FEE500]" />
                 <a href="http://pf.kakao.com/_rtxmxhX" target="_blank" rel="noopener noreferrer" className="hover:text-white">
-                  카카오톡 채널: 오픈도어 (ID: 오픈도어365)
+                  카카오톡 채널: 오픈도어기계광고 (ID: 오픈도어기계광고365)
                 </a>
               </li>
             </ul>
@@ -70,7 +70,7 @@ export default function Footer() {
             </div>
             <p>주소 : 서울특별시 강서구 화곡로66길 192, 1층(등촌동)</p>
             <p>
-              오픈도어(OpenDoor)는 전자동이 운영하는 산업기계 정보 및 광고 플랫폼입니다.<br />
+              오픈도어기계광고(OpenDoor)는 전자동이 운영하는 산업기계 정보 및 광고 플랫폼입니다.<br />
               본 플랫폼은 상품을 직접 판매하지 않으며 상품 정보 및 거래에 대한 책임은 각 공급사에게 있습니다.
             </p>
           </div>
@@ -129,7 +129,7 @@ export default function Footer() {
               >&times;</button>
             </div>
             <div className="p-6 max-h-[60vh] overflow-y-auto text-sm text-gray-600 leading-relaxed space-y-4">
-              <p>전자동(이하 '운영사')은 오픈도어 서비스를 이용하는 고객의 개인정보를 소중하게 생각하며, 관련 법령을 준수합니다.</p>
+              <p>전자동(이하 '운영사')은 오픈도어기계광고 서비스를 이용하는 고객의 개인정보를 소중하게 생각하며, 관련 법령을 준수합니다.</p>
               
               <div className="space-y-2">
                 <p className="font-bold text-gray-800">1. 개인정보의 수집 및 이용 목적</p>

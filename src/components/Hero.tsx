@@ -16,7 +16,7 @@ export default function Hero() {
       <div className="absolute inset-0 z-0">
         <img
           src="https://images.unsplash.com/photo-1537462715879-360eeb61a0ad?auto=format&fit=crop&q=80&w=1600"
-          alt="산업용 중고기계 매매 전문 플랫폼 전자동 오픈도어"
+          alt="산업용 중고기계 매매 전문 플랫폼 전자동 오픈도어기계광고"
           className="w-full h-full object-cover"
           referrerPolicy="no-referrer"
         />
@@ -34,13 +34,13 @@ export default function Hero() {
               className="text-left order-1"
             >
               <h1 className="text-clamp-h1 font-bold text-white leading-[1.2] sm:leading-[1.1] mb-8 tracking-tight">
-                <span className="inline-block whitespace-nowrap">중고기계매매 전문 플랫폼</span><br />
-                <span className="text-safety-orange">전자동 | 오픈도어</span>
+                <span className="inline-block whitespace-nowrap">중고기계를 팔리게 만드는 광고</span><br />
+                <span className="text-safety-orange">오픈도어기계광고</span>
               </h1>
               <p className="text-clamp-p text-white/90 mb-8 sm:mb-12 max-w-2xl leading-relaxed font-medium">
-                제조사·유통사·장비 보유 기업을 위한 산업장비 플랫폼<br />
-                보유한 기계·장비를 효과적으로 홍보하고<br />
-                구매 관심 고객과 전화·문의로 직접 연결됩니다.
+                오픈도어기계광고는 단순 노출이 아닌 실제 기계 판매로 이어지는<br />
+                전화 문의를 발생시키는 구조형 광고 서비스입니다.<br />
+                문의가 없는 기계 매물을 전화가 오는 상태로 바꿔드립니다.
               </p>
               
               <div className="flex flex-wrap gap-6 sm:gap-10 mb-12">
@@ -73,7 +73,7 @@ export default function Hero() {
                 <div className="relative z-10">
                   <h3 className="text-xl font-bold text-white mb-6">성공적인 거래의 시작</h3>
                   <p className="text-white/70 mb-10 leading-relaxed text-base">
-                    오픈도어와 함께라면 기계·장비 홍보부터<br />
+                    오픈도어기계광고와 함께라면 기계·장비 홍보부터<br />
                     실제 상담 연결까지 막힘없이 진행됩니다.
                   </p>
                   <a 

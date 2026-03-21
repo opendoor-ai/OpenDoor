@@ -25,7 +25,7 @@ export default function Header() {
               <DoorOpen className="text-white w-5 h-5 sm:w-6 sm:h-6" />
             </div>
             <span className="text-xl sm:text-2xl font-bold tracking-tighter text-industrial-blue">
-              오픈도어<span className="text-primary">.</span>
+              오픈도어기계광고<span className="text-primary">.</span>
             </span>
           </Link>
 

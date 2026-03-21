@@ -17,9 +17,8 @@ export default function BrandMission() {
             </span>
             
             <h2 className="text-clamp-h2 font-bold text-gray-900 leading-[1.4] sm:leading-[1.6] mb-10 tracking-tight">
-              오픈도어는 단순한 “광고 플랫폼”이 아닌 <br />
-              실제 거래가 시작되는 입구(Open Door) <br className="lg:hidden" />
-              가 되는 것을 목표로 합니다.
+              오픈도어기계광고는 광고가 아니라 <br />
+              기계 판매 결과를 만드는 구조형 광고 서비스입니다.
             </h2>
             
             <div className="w-20 h-1 bg-primary mx-auto rounded-full"></div>

@@ -30,7 +30,7 @@ async function startServer() {
       const adminMailOptions = {
         from: process.env.EMAIL_USER,
         to: process.env.ADMIN_EMAIL || process.env.EMAIL_USER,
-        subject: `[오픈도어] 새로운 상담 신청 알림 - ${company}`,
+        subject: `[오픈도어기계광고] 새로운 상담 신청 알림 - ${company}`,
         text: `
 새로운 상담 신청 내역:
 - 회사명: ${company}
@@ -45,9 +45,9 @@ async function startServer() {
       const applicantMailOptions = {
         from: process.env.EMAIL_USER,
         to: email,
-        subject: `[오픈도어] 상담 신청이 정상적으로 접수되었습니다.`,
+        subject: `[오픈도어기계광고] 상담 신청이 정상적으로 접수되었습니다.`,
         text: `
-안녕하세요, ${name}님. 오픈도어입니다.
+안녕하세요, ${name}님. 오픈도어기계광고입니다.
 남겨주신 상담 신청이 정상적으로 접수되었습니다.
 
 [신청 내역]

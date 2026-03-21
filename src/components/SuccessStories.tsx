@@ -7,7 +7,7 @@ export default function SuccessStories() {
     {
       title: "CNC 선반 5대 일괄 매도 성공",
       company: "S정밀 (경기도 안산)",
-      content: "공장 이전으로 급하게 처분해야 했는데, 오픈도어를 통해 48시간 만에 적정 가격으로 바이어를 만났습니다.",
+      content: "공장 이전으로 급하게 처분해야 했는데, 오픈도어기계광고를 통해 48시간 만에 적정 가격으로 바이어를 만났습니다.",
       image: "https://images.unsplash.com/photo-1565608438257-fac3c27beb36?auto=format&fit=crop&q=80&w=400"
     },
     {
@@ -24,7 +24,7 @@ export default function SuccessStories() {
         <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
           <div className="text-center md:text-left">
             <h2 className="text-clamp-h2 font-bold mb-6 text-gray-900">성공적인 매매 사례</h2>
-            <p className="text-clamp-p text-gray-600">이미 수많은 기업들이 오픈도어와 함께 성장하고 있습니다.</p>
+            <p className="text-clamp-p text-gray-600">이미 수많은 기업들이 오픈도어기계광고와 함께 성장하고 있습니다.</p>
           </div>
           <button className="text-primary font-bold hover:text-primary/80 transition-colors flex items-center gap-2 text-lg">
             전체 사례 보기 <ArrowRight className="w-5 h-5" />
