@@ -38,7 +38,8 @@ export default function Hero() {
                 <span className="text-safety-orange">오픈도어기계광고</span>
               </h1>
               <p className="text-clamp-p text-white/90 mb-8 sm:mb-12 max-w-2xl leading-relaxed font-medium">
-                오픈도어기계광고는 단순 노출이 아닌 실제 기계 판매로 이어지는<br />
+                오픈도어기계광고는<br />
+                단순 노출이 아닌 실제 기계 판매로 이어지는<br />
                 전화 문의를 발생시키는 구조형 광고 서비스입니다.<br />
                 문의가 없는 기계 매물을 전화가 오는 상태로 바꿔드립니다.
               </p>
