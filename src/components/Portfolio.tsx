@@ -6,24 +6,24 @@ import ConsultationForm from './ConsultationForm';
 export default function Portfolio() {
   const portfolios = [
     {
-      title: "원공사 (Wongongsa 2)",
+      title: "(주)OD상사(OD-BP-001)",
       description: "레이저 기계·장비 제조 전문 기업의 고성능 랜딩페이지입니다. 더욱 세련된 디자인과 최적화된 상담 시스템을 제공합니다.",
       url: "https://wongongsa2.vercel.app/",
-      image: "https://res.cloudinary.com/dqhj5ucak/image/upload/v1773485178/01_zhmute.jpg",
+      image: "https://res.cloudinary.com/dqhj5ucak/image/upload/v1774245281/0001_npo7xj.jpg",
       tags: ["레이저 기계·장비", "제조 전문", "고성능"]
     },
     {
-      title: "원공사 (Wongongsa)",
+      title: "OD상사(OD-PR-003)",
       description: "정밀한 기술의 완성. 레이저 절단기, 커팅기, 용접기 전문 제조 기업의 고성능 랜딩페이지입니다.",
       url: "https://wongongsa.vercel.app/",
-      image: "https://res.cloudinary.com/dqhj5ucak/image/upload/v1773485178/02_fpppxi.jpg",
+      image: "https://res.cloudinary.com/dqhj5ucak/image/upload/v1774245287/0002_sovgc9.jpg",
       tags: ["레이저 기계·장비", "정밀제조", "공식대리점"]
     },
     {
-      title: "대화상사 (Daehwa SS)",
+      title: "OD상사(OD-PR-001)",
       description: "30년 전통의 중고 기계 매매 전문. 새 기계 같은 성능과 합리적인 가격을 보증하는 신뢰의 플랫폼입니다.",
       url: "https://daehwass.vercel.app/",
-      image: "https://res.cloudinary.com/dqhj5ucak/image/upload/v1773485178/03_bheu1i.jpg",
+      image: "https://res.cloudinary.com/dqhj5ucak/image/upload/v1774245292/0003_d9hdcn.jpg",
       tags: ["중고기계", "유통매매", "30년전통"]
     }
   ];
